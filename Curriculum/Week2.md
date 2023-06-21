@@ -15,6 +15,53 @@ NO CLASS - Juneteenth
 
 - ## JavaScript Basics
 - ## JavaScript Intermediate
+  Functions
+  - creating a function
+  - calling a function
+  - paramteres and arguments
+  - returning values
+  - functions and TDD
+    Loops & Debugging
+  - for loops
+  - while loop
+  - break/continue keywords
+  - interpreting a stack trace/error message
+  - debugging a failing test
+    Coercion and Truthiness
+  - brief topic
+    Scope
+  - brief topic
+    Arrays
+  - what is an array
+  - typeof
+  - bracket access, bracket assignment
+  - .length property
+  - array methods
+    - maps & sets
+  - nested arrays
+    Objects
+  - what is an object
+  - typeof object
+  - accessing, adding, changing, deleting values
+  - in operator/for in loop
+  - Object.keys();
+  - nested arrays and objects
+    Object Methods
+  - what is a method
+  - creating, accessing, running method
+  - using "this"
+    PBV vs PBR
+  - Primitive vs. complex types
+  - Passing values into functions
+  - Equality operators and PBV/PBR
+    Higher Order Functions
+  - callback functions
+  - .forEach
+  - returning functions from functions
+  - closure
+    Recursion
+  - call stack
+  - recursion with arrays, strings
 
 #### Thursday, June 22nd, 2023
 
