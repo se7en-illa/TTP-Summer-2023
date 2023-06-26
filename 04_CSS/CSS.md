@@ -6,7 +6,6 @@
 - Pre-requisites
     1) Install Visual Studio Code
     2) Install the `Live Server` VSCode Extension
-- [CSS Slides (TBD)]()
 - Topics we'll be going over
     - > Note: Create index.html file
     - **Internal CSS Styling**:
@@ -762,4 +761,4 @@
 
 - **CSS Assignments (Breakout rooms - 5)**
     - TBD
-- [CSS Quiz/Feedback Form (TBD)]()
+- [CSS Quiz/Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLScQB-D9EXVGkLAksI6rdifa9yywCP7ADytFWLmeuZaphicYQg/viewform)
