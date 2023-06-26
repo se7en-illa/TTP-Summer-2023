@@ -1,0 +1,18 @@
+{
+  "name": "ttpsummer2023",
+  "version": "1.0.0",
+  "description": "class repository for John Jay",
+  "scripts": {
+    "test": "jasmine-browser-runner serve"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jasmine": "^5.0.2",
+    "jasmine-browser-runner": "^2.0.0",
+    "jasmine-core": "^5.0.1",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8"
+  }
+}
