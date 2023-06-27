@@ -46,7 +46,8 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 - [x] June 26th: Intermediate Javascript (pt2)
   - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/l-fiYE3aPLYFvEnMCSfiOPpkaUbZQhV2BanRWik_ezFhklZgZgEaJ8qaWC9hPGN_.xGM1NYZ4_9JVTSzA)
-- [ ] June 27th: Intro to HTML
+- [x] June 27th: Intro to HTML
+  - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/WgZqQ7zC-c5-Lvp_lG5tY66zpZpCjCRaeTXKwhK-cFVO6mdlaR18GchJZSEg5w.vcho2P1Pdiu4Em-Y)
 - [ ] June 28th: Intro to CSS
 - [ ] June 29th: Solo Project #1: HTML & CSS
 - [ ] June 30th: Office Hours
