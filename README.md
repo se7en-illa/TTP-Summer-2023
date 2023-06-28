@@ -46,8 +46,8 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 - [x] June 26th: Intermediate Javascript (pt2)
   - Recording:
-- [ ] June 27th: Intro to HTML
-- [ ] June 28th: Intro to CSS
+- [x] June 27th: Intro to HTML
+- [x] June 28th: Intro to CSS
 - [ ] June 29th: Solo Project #1: HTML & CSS
 - [ ] June 30th: Office Hours
 
