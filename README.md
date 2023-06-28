@@ -35,19 +35,20 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 - [x] June 19th: HOLIDAY - Juneteenth
 - [x] June 20th: Intro to Git
-  - Recording:
+  - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/MwJQQ9yyWfHE2yuWPVscSBfz-UDdY_TORl79-sWI273U8iOo_W6XwnLwOVRS5rUl.ClF5MKqL2Qwczcsq)
 - [x] June 21st: Beginning Javascript
-  - Recording:
+  - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/8x9MhbVw-6cnuLjyN1JVqQkvW7rDm8UPrVoMUP4SP0RoeYqIfETTeaeWUj0YQH_j.RkgRR6Jke7h3OB5t)
 - [x] June 22nd: Intermediate Javascript (pt1)
-  - Recording:
+  - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/ZRBq8sBtCfI-R73aoFdN-CgYdZOrDGXTmw4ErHYb35p1us-lCwYNgJm58L5Otkxe.0C9aKzkTbtCikJw0)
 - [x] June 23rd: Office Hours
 
 ###### W2:
 
 - [x] June 26th: Intermediate Javascript (pt2)
-  - Recording:
+  - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/l-fiYE3aPLYFvEnMCSfiOPpkaUbZQhV2BanRWik_ezFhklZgZgEaJ8qaWC9hPGN_.xGM1NYZ4_9JVTSzA)
 - [x] June 27th: Intro to HTML
-- [x] June 28th: Intro to CSS
+  - Recording: [click here](https://jjay-cuny.zoom.us/rec/share/WgZqQ7zC-c5-Lvp_lG5tY66zpZpCjCRaeTXKwhK-cFVO6mdlaR18GchJZSEg5w.vcho2P1Pdiu4Em-Y)
+- [ ] June 28th: Intro to CSS
 - [ ] June 29th: Solo Project #1: HTML & CSS
 - [ ] June 30th: Office Hours
 
