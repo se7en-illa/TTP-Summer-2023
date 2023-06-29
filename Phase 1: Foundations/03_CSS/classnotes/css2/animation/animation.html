@@ -1,52 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <style>
-      /* CSS Animation */
-      @keyframes example {
-        from {
-          background-color: lightblue;
-        }
-        to {
-          background-color: coral;
-        }
-      }
-
-      div {
-        width: 100px;
-        height: 100px;
-        background-color: lightblue;
-        animation-name: example;
-        animation-duration: 4s;
-      }
-
-      /* Responsive design */
-      @media only screen and (max-width: 600px) {
-        body {
-          background-color: lightblue;
-        }
-      }
-
-      @media only screen and (min-width: 601px) {
-        body {
-          background-color: white;
-        }
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Animation Demo</title>
   </head>
-  <body>
-    <h1>CSS Animations and Responsive Design Example</h1>
-
-    <p>
-      This div will animate the background color from lightblue to coral over a
-      period of 4 seconds:
-    </p>
-    <div></div>
-
-    <p>
-      Resize the browser window. The background color of this document will
-      change when the width of the viewport is less than 600px and greater than
-      600px.
-    </p>
+  <body class="container">
+    <div class="animation">Hover over me!</div>
+    <div class="keyframe-animation">Weeee!</div>
   </body>
 </html>

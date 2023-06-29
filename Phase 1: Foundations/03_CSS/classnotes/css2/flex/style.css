@@ -1,0 +1,89 @@
+/* Basic container setup with flex */
+/* .container {
+  display: flex;
+} */
+
+/* Setup for items */
+/* .item {
+  margin: 10px;
+  padding: 20px;
+  background: darkblue;
+  color: white;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+  height: 100px;
+  width: 100px;
+} */
+
+/* FLEX CONTAINER */
+
+/* Flex Direction */
+/* .container {
+  display: flex;
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+ flex-direction: column-reverse;
+} */
+
+/* Flex Wrap */
+
+.container {
+  /* flex-wrap: nowrap; */
+  /* flex-wrap: wrap; */
+  /* flex-wrap: wrap-reverse; */
+}
+
+/* FLEX ITEMS */
+
+/* Flex Grow */
+/* .item1 {
+  flex-grow: 3;
+}
+
+.item2 {
+  flex-grow: 2;
+} */
+
+/* Flex Shrink */
+
+/* .item1 {
+  flex-shrink: 1;
+}
+
+.item2 {
+  flex-shrink: 2;
+} */
+
+/* Flex Basis */
+
+/* .item1 {
+  flex-basis: 100px;
+}
+
+.item2 {
+  flex-basis: 200px;
+} */
+
+/* ITEM SETUP PT.2 */
+.item {
+  margin: 10px;
+  padding: 20px;
+  background: darkblue;
+  color: white;
+  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+  height: 100px;
+  width: 100px;
+}
+
+/* FLEX SETUP PT.2 */
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Other Flexbox Properties */

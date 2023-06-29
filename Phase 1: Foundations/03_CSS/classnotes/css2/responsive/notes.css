@@ -1,0 +1,86 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+section p {
+  color: blue;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media query for viewports above 600px wide */
+@media (min-width: 600px) {
+  body {
+    background-color: #f8f9fa;
+  }
+
+  section p {
+    color: green;
+  }
+}
+
+/* Media query for viewports above 900px wide */
+@media (min-width: 900px) {
+  body {
+    background-color: #e9ecef;
+  }
+
+  section p {
+    color: red;
+  }
+}
+
+/* Media query for screen */
+@media screen {
+  header {
+    border-bottom: 2px solid #333;
+  }
+}
+
+/* Media query for screen and minimum width */
+@media screen and (min-width: 1200px) {
+  header {
+    border-bottom: 2px solid #666;
+  }
+}
+
+/* Media query for orientation */
+@media (orientation: landscape) {
+  header {
+    background-color: #ffc107;
+  }
+}
+
+@media (orientation: portrait) {
+  header {
+    background-color: #17a2b8;
+  }
+}
+
+/* Media query for resolution */
+@media (min-resolution: 2dppx) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Media query for aspect-ratio */
+@media (aspect-ratio: 16/9) {
+  body {
+    line-height: 1.5;
+  }
+}
+
+/* Media query for hover */
+@media (hover: hover) {
+  section p {
+    text-decoration: underline;
+  }
+}
