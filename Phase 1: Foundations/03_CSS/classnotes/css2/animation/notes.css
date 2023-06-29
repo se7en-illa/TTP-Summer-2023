@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Class to apply to the HTML element you want to animate */
+.animation {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: darkmagenta;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  /* Defines transition effects for the width, height, and background-color properties, 
+           each taking 2 seconds to transition from their initial state to their final state */
+  transition: width 2s, height 2s, background-color 2s;
+}
+
+/* This applies when an element with the 'animation' class is being hovered over */
+.animation:hover {
+  /* Width of the element expands to 400px on hover */
+  width: 400px;
+
+  /* Height of the element expands to 400px on hover */
+  height: 400px;
+
+  /* Background color of the element changes to green on hover */
+  background-color: lightpink;
+}
+
+/* Class to apply to the HTML element you want to apply keyframe animation to */
+.keyframe-animation {
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  padding: 20px;
+  background-color: darkblue;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  /* Name of the keyframe animation to apply */
+  animation-name: spin;
+
+  /* Duration of one cycle of the animation */
+  animation-duration: 4s;
+
+  /* Number of times the animation will run. Here, it's set to run indefinitely */
+  animation-iteration-count: infinite;
+
+  /* Timing function to be used. Linear means the animation maintains the same speed throughout */
+  animation-timing-function: linear;
+}
+
+/* Definition of the 'spin' keyframe animation */
+@keyframes spin {
+  /* Starting state of the animation. The element will be unrotated initially */
+  from {
+    transform: rotate(0deg);
+  }
+
+  /* Ending state of the animation. The element will complete one full clockwise rotation */
+  to {
+    transform: rotate(360deg);
+  }
+}
