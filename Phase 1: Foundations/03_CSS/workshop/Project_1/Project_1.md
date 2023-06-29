@@ -7,7 +7,9 @@
 - **Due Date**: July 4th at 11:59PM
     - Make sure you are creating this project in your **Main Repo**
     - When finished, **push all your changes to your Main Repo**
-    - A TA will then review your project (grading scale based on the completion of all requirements), and reach out to inform you of your grade.
+    - A TA will then review your project (grading scale based on the completion of all requirements), and reach out to inform you of your grade by the end of the week.
+    - On **July 5th**, all students will be required to **demo** their project at the beginning of class.
+        - Quick 30-second overview of their project
 - **Example of a Finished Project**
     <details>
         <summary>Project 1</summary>
