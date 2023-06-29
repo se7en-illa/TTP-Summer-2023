@@ -6,13 +6,10 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 ## Links and Resources
 
-#### Important Class Links
-
-- [Class Repo](https://github.com/se7en-illa/TTP-Summer-2023)
-
 #### Documentation
 
 - [Git Docs](https://git-scm.com/doc)
+- [CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS)
 - [Javascript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [React Docs](https://react.dev/learn)
 - [React Hooks & Components Docs](https://react.dev/reference/react)
@@ -23,9 +20,14 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 #### Practice and Other Resources
 
+- [StackOverflow](https://stackoverflow.com/) - Chances are if you have an issue with your code, someone has a solution here!
 - [Pair Programming Guide by Martin Fowler](https://martinfowler.com/articles/on-pair-programming.html)
-- [Codewars](https://codewars.com)
-- [Leetcode](https://leetcode.com)
+- [w3Schools](https://www.w3schools.com/) - HTML & CSS Resource
+- [CSSTricks](https://css-tricks.com/)
+- [freeCodeCamp](https://www.freecodecamp.org/)
+- [CodeAcademy](https://www.codecademy.com/) - Great for learning languages and other web dev concepts
+- [Codewars](https://codewars.com) - Great for programming language practice
+- [Leetcode](https://leetcode.com) - More difficult, better for technical interview practice
 
 ## Course Outline
 
@@ -48,24 +50,25 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/l-fiYE3aPLYFvEnMCSfiOPpkaUbZQhV2BanRWik_ezFhklZgZgEaJ8qaWC9hPGN_.xGM1NYZ4_9JVTSzA)
 - [x] June 27th: Intro to HTML
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/WgZqQ7zC-c5-Lvp_lG5tY66zpZpCjCRaeTXKwhK-cFVO6mdlaR18GchJZSEg5w.vcho2P1Pdiu4Em-Y)
-- [x] June 28th: Intro to CSS
+- [x] June 28th: Intro to CSS Pt.1
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/J96-fTpn6GgPrDZyTf22l0-aOP2Mb1CSF6Pki9QgYZgVZsj90um1-3Ks3fCDd65B.-ksOlQXtzCthCMa3)
+- [x] June 29th: Intro to CSS Pt.2 + Project #1: HTML & CSS
   - Recording: [📺 click here]()
-- [ ] June 29th: Solo Project #1: HTML & CSS
 - [ ] June 30th: Office Hours
 
 ###### W3:
 
-July 3rd?
-
+- [ ] July 3rd: Advanced CSS Topics
+- [ ] July 4th: NO CLASS - HOLIDAY - **Project #1 Due at Midnight**
 - [ ] July 5th: DOM Manipulation 1
-- [ ] July 6th: DOM Manipulation 2 + Solo Project #2
+- [ ] July 6th: DOM Manipulation 2 + Project #2: DOM
 - [ ] July 7th: Office Hours
 
 #### Phase 2: React & Redux
 
 ###### W4:
 
-- [ ] July 10th: Intro to React
+- [ ] July 10th: Intro to React - **Project #2 Due**
 - [ ] July 11th: Intro to React 2
 - [ ] July 12th: Intro to React 3
 - [ ] July 13th: React Router, Context, & Hooks
