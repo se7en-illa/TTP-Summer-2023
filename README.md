@@ -54,6 +54,7 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/J96-fTpn6GgPrDZyTf22l0-aOP2Mb1CSF6Pki9QgYZgVZsj90um1-3Ks3fCDd65B.-ksOlQXtzCthCMa3)
 - [x] June 29th: Intro to CSS Pt.2 + Project #1: HTML & CSS
   - Recording: [📺 click here]()
+  - Project #1: [Assignment](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/Phase%201%3A%20Foundations/03_CSS/workshop/Project_1/Project_1.md)
 - [ ] June 30th: Office Hours
 
 ###### W3:
