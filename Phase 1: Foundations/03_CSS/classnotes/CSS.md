@@ -758,7 +758,4 @@
                 bottom: 0;
             }
             ```
-
-- **CSS Assignments (Breakout rooms - 5)**
-    - TBD
 - [CSS Quiz/Feedback Form](https://docs.google.com/forms/d/e/1FAIpQLScQB-D9EXVGkLAksI6rdifa9yywCP7ADytFWLmeuZaphicYQg/viewform)
