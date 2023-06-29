@@ -1,0 +1,129 @@
+.flex-container {
+  display: flex;
+  background-color: lightgrey;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+.flex-column-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-column-container > div {
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Basic container setup with flex */
+.container {
+  display: flex;
+}
+
+/* Setup for items */
+.item {
+  margin: 10px;
+  padding: 20px;
+  background: lightblue;
+}
+
+/* Direction */
+/* Uncomment one at a time to show different directions */
+/* .container {
+    flex-direction: row;
+} */
+/* .container {
+    flex-direction: row-reverse;
+} */
+/* .container {
+    flex-direction: column;
+} */
+/* .container {
+    flex-direction: column-reverse;
+} */
+
+/* Wrap */
+/* Uncomment one at a time to show different wrapping */
+/* .container {
+    flex-wrap: nowrap;
+} */
+/* .container {
+    flex-wrap: wrap;
+} */
+/* .container {
+    flex-wrap: wrap-reverse;
+} */
+
+/* Flex grow */
+/* Uncomment to show different grow factors */
+/* .item1 {
+    flex-grow: 1;
+} */
+/* .item2 {
+    flex-grow: 2;
+} */
+
+/* Flex shrink */
+/* Uncomment to show different shrink factors */
+/* .item1 {
+    flex-shrink: 1;
+} */
+/* .item2 {
+    flex-shrink: 2;
+} */
+
+/* Flex basis */
+/* Uncomment to show different basis settings */
+/* .item1 {
+    flex-basis: 100px;
+} */
+/* .item2 {
+    flex-basis: 200px;
+} */
+
+/* Other flexbox properties */
+/* Uncomment one at a time to show different alignments */
+/* .container {
+    justify-content: flex-start;
+} */
+/* .container {
+    justify-content: flex-end;
+} */
+/* .container {
+    justify-content: center;
+} */
+/* .container {
+    justify-content: space-between;
+} */
+/* .container {
+    justify-content: space-around;
+} */
+/* .container {
+    justify-content: space-evenly;
+} */
+/* .container {
+    align-items: stretch;
+} */
+/* .container {
+    align-items: flex-start;
+} */
+/* .container {
+    align-items: flex-end;
+} */
+/* .container {
+    align-items: center;
+} */
+/* .container {
+    align-items: baseline;
+} */
