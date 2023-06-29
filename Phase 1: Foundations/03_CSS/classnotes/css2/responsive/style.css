@@ -1,0 +1,71 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
+  text-align: center;
+}
+
+section p {
+  color: blue;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (min-width: 600px) {
+  body {
+    background-color: #f8f9fa;
+  }
+
+  section p {
+    color: green;
+  }
+}
+
+@media (min-width: 900px) {
+  body {
+    background-color: #e9ecef;
+  }
+
+  section p {
+    color: red;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  header {
+    border-bottom: 2px solid #666;
+  }
+}
+
+@media (orientation: landscape) {
+  header {
+    background-color: darkblue;
+  }
+}
+
+@media (orientation: portrait) {
+  header {
+    background-color: #ffc107;
+  }
+}
+
+@media (min-resolution: 2ddpx) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (aspect-ratio: 16/9) {
+  body {
+    line-height: 1.5;
+  }
+}
+
+@media (hover: hover) {
+  section p {
+    text-decoration: underline;
+  }
+}
