@@ -6,6 +6,7 @@
     "test": "jasmine-browser-runner serve"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -13,6 +14,8 @@
     "jasmine-browser-runner": "^2.0.0",
     "jasmine-core": "^5.0.1",
     "nodemon": "^2.0.22",
-    "prettier": "^2.8.8"
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
+    "tailwindcss": "^3.3.2"
   }
 }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tailwind CSS Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <header class="text-center py-16">
+      <h1 class="text-6xl font-bold mb-4">Welcome to Tailwind!</h1>
+      <h2 class="text-2xl">Usage Examples</h2>
+    </header>
+
+    <!-- A vibrant button -->
+    <div class="flex justify-center mt-12">
+      <button
+        class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-bold py-3 px-8 rounded-full"
+      >
+        Button
+      </button>
+    </div>
+
+    <!-- A vibrant card -->
+    <div
+      class="max-w-md mx-auto bg-blue-500 rounded-xl shadow-md overflow-hidden mt-10"
+    >
+      <img
+        class="h-48 w-full object-cover"
+        src="https://picsum.photos/seed/picsum/800/600"
+        alt="Card Image"
+      />
+      <div class="p-8">
+        <div
+          class="uppercase tracking-wide text-sm text-indigo-100 font-semibold"
+        >
+          Photo Card
+        </div>
+        <p class="mt-2 text-white">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam,
+          voluptates, dolorem iusto dolorum.
+        </p>
+      </div>
+    </div>
+
+    <!-- A vibrant form -->
+    <div class="w-full max-w-xs mx-auto mt-10">
+      <form class="bg-green-500 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label
+            class="block text-gray-300 text-sm font-bold mb-2"
+            for="username"
+          >
+            Username
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
+            type="text"
+            placeholder="Username"
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            class="block text-gray-300 text-sm font-bold mb-2"
+            for="password"
+          >
+            Password
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            placeholder="******************"
+          />
+        </div>
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-gradient-to-r from-pink-500 to-yellow-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button"
+          >
+            Sign In
+          </button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
