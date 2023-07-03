@@ -80,3 +80,48 @@
             - Ex: when you shrink your page, your elements/website aren't disorganized, but are dynamically able to adapt as your page shrinks when used in order devices.
     - **Audio** Folder
       - Include your audio files
+    
+## Project 1: Grading Rubric
+- **Description**
+    - Total Possible Points: **32**
+    - After submission: a TA will review your project (from your Main Repo)
+    - Grades: You will receive your project grade via **slack**, from a TA by the end of the week from the due date
+- [ ] Theme of project (**1 point**)
+- [ ] Style/colors of project (**1 point**)
+- [ ] Folder structure (**5 total points**)
+	- [ ] Main “Project_1” Folder (**1 point**)
+	- [ ] Inside of “Project_1”, you have on “Images” folder (**1 point**)
+	- [ ] Inside of “Project_1”, you have on “Audio” folder (**1 point**)
+	- [ ] Inside of “Project_1”, you have on “CSS or Styles” folder, with the “style.css” file (**1 point**)
+	- [ ] Inside of “Project_1”, you have a “index.html” file (**1 point**)
+- [ ] Navbar (**3 total points**)
+	- [ ] Has at least 2 page options (clickable options) (**1 point**)
+	- [ ] When one of the Navbar options is clicked, it takes the user to the designated section on their website (**1 point**)
+	- [ ] Navbar is centered/all the way to the left/all the way to the right (**1 point**)
+- [ ] Footer (**3 total points**)
+	- [ ] 1st line of footer (**2 points**)
+        * Must contain the same amount of sections as your navbar
+            * when clicking a footer section (in this first line), it must take the user to that designated section on your website
+	- [ ] 3 Lines of text (**1 point**)
+	    * second line of footer: Must include "@Summer2023 Tech Talent Pipeline"
+        * Third line of footer: must include your full name
+        * fourth line of footer: must include your email address
+- [ ] Body (**17 Total Points**)
+    - [ ] 1 Main Section below the navbar (**3 Points**)
+        - Title of Your website directly in the middle
+        - Left half of section: contains text relating to your website, with a button below that text
+        - Right half of section: contains an image related to your website
+    - [ ] 2 Sub-Page sections (Same number of sections like your navbar) (**14 Points**)
+        - Each sub section has 
+            - a main title (**2 Point**)
+            - Each row (**4 Points**)
+                - **1 or more** rows displaying at least 3 columns
+            - Each column (content should be centered) (**6 Points**)
+                - Contain a main heading (ex: name of artist,singer, etc..)
+                - contain an image (different image for each column)
+                - contain an audio element
+                    - Audio element can use the same audio file for every column
+            - End with a button on the center of the page (below info above) (**2 Points**)
+- [ ] Website Responsiveness (**2 Total Points**)
+    - [ ] All Website content is centered when in mobile size (**1 point**)
+    - [ ] Content doesn't look distorted in mobile size (**1 Point**)
