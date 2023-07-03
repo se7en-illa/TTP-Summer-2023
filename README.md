@@ -55,12 +55,13 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 - [x] June 29th: Intro to CSS Pt.2 + Project #1: HTML & CSS
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/I3w3qAj9mpZI7TC-zxqGlc6oqRwKK_d6TplEo83tfVyqV299toa3cD643rE6KRM0.pJbpxi-zVMYnF0bV)
   - Project #1: [Assignment](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/Phase%201%3AFoundations/03_CSS/workshop/Project_1/Project_1.md)
-- [ ] June 30th: Office Hours
+- [x] June 30th: Office Hours
 
 ###### W3:
 
-- [ ] July 3rd: Advanced CSS Topics
-- [ ] July 4th: NO CLASS - HOLIDAY - **Project #1 Due at Midnight**
+- [x] July 3rd: Advanced CSS Topics
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/_jzeyB82OE6JBgZ-kr5nZIbW_pINs7PGE-G3CU0PkVh3guWZdUHmS-JVpbh7fubt.E-FSPooPR9NvLzPg)
+- [x] July 4th: NO CLASS - HOLIDAY - **Project #1 Due at Midnight**
 - [ ] July 5th: DOM Manipulation 1
 - [ ] July 6th: DOM Manipulation 2 + Project #2: DOM
 - [ ] July 7th: Office Hours
