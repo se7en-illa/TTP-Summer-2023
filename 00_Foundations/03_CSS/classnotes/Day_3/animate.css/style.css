@@ -1,0 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin-top: 50px;
+  background-color: cornsilk;
+}
+
+.box {
+  padding: 50px;
+  background-color: darkcyan;
+  color: white;
+  font-size: 2rem;
+  border-radius: 15px;
+}
