@@ -62,7 +62,8 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 - [x] July 3rd: Advanced CSS Topics
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/_jzeyB82OE6JBgZ-kr5nZIbW_pINs7PGE-G3CU0PkVh3guWZdUHmS-JVpbh7fubt.E-FSPooPR9NvLzPg)
 - [x] July 4th: NO CLASS - HOLIDAY - **Project #1 Due at Midnight**
-- [ ] July 5th: DOM Manipulation 1
+- [x] July 5th: DOM Manipulation 1
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/3znwFSQAB9v49Tcdwk5V5wb2ayexkjyjFzeJcC0Dhnd0COupU8CgH3NmolYB1gcN.cH2yDF_LumeaQWrk)
 - [ ] July 6th: DOM Manipulation 2 + Project #2: DOM
 - [ ] July 7th: Office Hours
 
