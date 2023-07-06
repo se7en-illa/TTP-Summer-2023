@@ -64,7 +64,8 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 - [x] July 4th: NO CLASS - HOLIDAY - **Project #1 Due at Midnight**
 - [x] July 5th: DOM Manipulation 1
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/3znwFSQAB9v49Tcdwk5V5wb2ayexkjyjFzeJcC0Dhnd0COupU8CgH3NmolYB1gcN.cH2yDF_LumeaQWrk)
-- [ ] July 6th: DOM Manipulation 2 + Project #2: DOM
+- [x] July 6th: DOM Manipulation 2 + Project #2: DOM
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/WBcu0L5CmCsgOU9owp72tHlw6QIs6zsUDhVpdTSfR33omu1xKKddRuP82w7zppic.de6JW7y9_dHUMJpl)
 - [ ] July 7th: Office Hours
 
 #### Phase 2: React & Redux
