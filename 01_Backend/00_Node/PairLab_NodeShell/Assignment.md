@@ -415,3 +415,49 @@ Well done! The nice thing about this exercise is that you may continue work on i
 - **_uniq_**
 - **_find_**
 </details>
+</details>
+
+<details>
+<summary><h1>7. Review</h1></summary>
+
+#### Main Takeaways
+
+- Concepts of program execution
+  - A program is data / text in storage
+  - A process is a program loaded into memory and executed by the CPU
+    - A thread is a sequence of steps executed by the CPU
+    - A process consists of one or more threads which share memory (variables)
+    - Multiple processes can be spawned from the same program
+    - Processes do not share memory
+    - The Operating System (OS) schedules jumps between all active threads
+    - Every process has a PID (Process ID)
+- UNIX basics
+  - Every UNIX command is really a small, single-purpose program
+  - **man **\_\*\*\*\* is a UNIX command for reading the manual pages for a given command
+  - UNIX programs accept data from STDIN and output data to STDOUT (normally) or STDERR (if something went wrong)
+  - Many UNIX programs accept an argument (e.g. a filename to run on)
+- Node.js
+  - A process for executing JavaScript on a machine, in a non-web-browser context
+  - Consists of the V8 JS runtime (a single-threaded compiler), event loop, thread pool, and other C/C++ components
+  - Has APIs and variables for interacting with the machine, such as the filesystem and network
+    - Asynchronous, synchronous, blocking, and non-blocking
+    - Node-style error-first callbacks ("errbacks") for asynchronous functions
+    - Specific examples including fs.readdir, fs.readFile
+    - Has global and module variables for specific information
+      - **\_\_dirname:** directory the module is located in
+      - **process.pwd():** directory the user initiated the node process from
+      - **process.argv:** arguments user wrote to initiate the node process
+      - **process.env:** object containing environment variables as properties
+  - Uses the CommonJS module system
+    - Definition of a module: JS or JSON file
+    - Requiring modules
+      - Runs the file the first time, and caches the result (if required again, simply uses the old value): "singleton"
+      - The result is the **module.exports** value (JS) or JSON object (JSON) of that module
+      - The **require** statement
+        - Used with built-in modules: fetches by module name, e.g. `const fs = require('fs')`
+        - Used with installed npm packages: fetches by module name, e.g. `const chalk = require('chalk')`
+        - Used with custom-written modules (JS files): fetches by relative path, e.g. `const myCommands = require('./commands/index.js')`
+          - Assumes the **js** extension, e.g. `const myCommands = require('./commands/index')`
+          - Assumes an **index.js** file, e.g. `const myCommands = require('./commands/')` or `require('./commands')`
+
+</details>
