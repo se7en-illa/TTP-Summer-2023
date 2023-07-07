@@ -51,7 +51,7 @@ $ git log # shows the commit you just made (optional - it's nice to see though!)
 <details>
 <summary><h1>2. The Process Global</h1></summary>
 <details>
-<summary><h1>Read: Simulating the Bash Shell</h1></summary>
+<summary><h3>Read: Simulating the Bash Shell</h3></summary>
 
 We'd like to build a system that works like this:
 
@@ -75,7 +75,7 @@ bash.js
 </details>
 
 <details>
-<summary><h1>Code: Stream Communication</h1></summary>
+<summary><h3>Code: Stream Communication</h3></summary>
 
 - In Unix environments, programs can communicate with streams called _STDIN_, _STDOUT_, and _STDERR_ (Standard Input, Output, and Error).
 - As the names imply, Standard Input is data flowing into the program and Standard Output is a channel for data coming out from the program.
@@ -112,7 +112,7 @@ Note that our process doesn't immediately end this time. That's because we've re
 </details>
 
 <details>
-<summary><h1>Code: `pwd`</h1></summary>
+<summary><h3>Code: `pwd`</h3></summary>
 
 - The first bash command we'll implement in our node-shell program is `pwd`, which simply prints out the full path to the current working directory. **Try running the real pwd command in your terminal for yourself**
 
@@ -133,7 +133,7 @@ The process's *current working directory* (cwd) is available as a method on the 
 </details>
 
 <details>
-<summary><h1>Code: Streamline with Nodemon</h1></summary>
+<summary><h3>Code: Streamline with Nodemon</h3></summary>
 
 - As you are developing your **bash.js**, you may find it annoying to keep doing:
 
