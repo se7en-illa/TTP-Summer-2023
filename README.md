@@ -66,8 +66,8 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/3znwFSQAB9v49Tcdwk5V5wb2ayexkjyjFzeJcC0Dhnd0COupU8CgH3NmolYB1gcN.cH2yDF_LumeaQWrk)
 - [x] July 6th: DOM Manipulation 2 + Project #2: DOM
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/WBcu0L5CmCsgOU9owp72tHlw6QIs6zsUDhVpdTSfR33omu1xKKddRuP82w7zppic.de6JW7y9_dHUMJpl)
-  - Project #2: [Assignment](https://github.com/se7en-illa/dom-project-2)
-- [ ] July 7th: Office Hours
+  - Project #2: [Assignment](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/00_Foundations/04_DOM/Project%232/Project%232.md)
+- [x] July 7th: Office Hours
 
 #### Phase 2: Back-End Development: Servers & Databases
 
