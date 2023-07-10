@@ -73,8 +73,11 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 ###### W4:
 
-- [ ] July 10th: Terminal Review + Node.js - **Project #2 Due**
+- [x] July 10th: Terminal Review + Node.js - **Project #2 Due**
 - [ ] July 11th: Intro to Express
+  - Pre-reading:
+    - [What is an API?](https://www.youtube.com/watch?v=tgbRY96q-KM)
+    - [Backend Architecture](https://www.codecademy.com/article/back-end-architecture)
 - [ ] July 12th: Express Extras
 - [ ] July 13th: JS Promises
 
