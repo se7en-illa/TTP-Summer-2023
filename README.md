@@ -74,6 +74,7 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 ###### W4:
 
 - [x] July 10th: Terminal Review + Node.js - **Project #2 Due**
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/LQUlR0HlszNG98dNgRb40LYI66DWSLl5g_KUs9wJ60ZM1m5B6BEQ2uFYF4zhrRUf.oZCp2SYexZxFQfhE)
 - [ ] July 11th: Intro to Express
   - Pre-reading:
     - [What is an API?](https://www.youtube.com/watch?v=tgbRY96q-KM)
