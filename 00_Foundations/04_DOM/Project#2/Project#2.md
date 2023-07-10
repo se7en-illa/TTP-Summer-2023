@@ -54,3 +54,26 @@ Here is an example of this project with CSS styling and extra credit completed:
     - **Description**: If you'd like to challenge yourself, please follow the link below to learn how you can challenge yourself to create the same Tasks as **Option 1**, but utlilizing Classes. 
         - [Guess Game - Extra Credit](https://github.com/se7en-illa/dom-project-2)
         > Note: This involves using Classes (not something we learned in class)
+
+## Project 2: Grading Rubric
+
+- **Description**
+  - Total Possible Points: **46**
+  - **Note**: If you chose **Option 2 (Extra Credit), it will be graded based on the readMe prompt (containing all necessary functions, class, etc..)
+  - After submission: a TA will review your project (from your Main Repo)
+  - Grades: You will receive your project grade via **slack**, from a TA by the end of the week from the due date
+- [ ] HTML (**7 Total points**)
+    - [ ] Contains Rules of Game (**1 point**)
+    - [ ] Contains submit/check button (**1 point**)
+    - [ ] Contains play/restart button (**1 point**)
+    - [ ] Contains Highscore (**1 point**)
+    - [ ] Contains Input element (**1 point**)
+    - [ ] Contains `p` element that displays text to user (**1 point**)
+    - [ ] Displays guessed User number (once game is finished) (**1 point**)
+- [ ] CSS (**3 points**)
+    - [ ] Proper CSS Styling
+- [ ] Javascript - DOM (**36 total points**)
+  - [ ] Contains `ChangeMsg` Function with parameter + changing  (**3 points**) 
+  - [ ] Contains 3 global variables (randomNum, score, highscore) (**3 points**)
+  - [ ] Contains Submit button DOM variable with an addEventListener that pays attention when that selected button element is clicked. Also contains all logic as seen from the section above (**20 points**)
+  - [ ] Has addEventListener that contains logic regarding restarting your game from the beginning, with a new highscore and no elements being disabled (**10 points**)
