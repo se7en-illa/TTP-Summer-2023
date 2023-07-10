@@ -26,9 +26,9 @@
 <details>
 <summary><h1>1. Setup</h1></summary>
 
-- This workshop will be built completely from an empty directory! This means that our Git workflow will be slightly different. Instead of both partners forking from a shared starting point, one partner ("PartnerA") will create the initial project, and the other partner ("PartnerB") will fork that project.
+- This workshop will be built completely from an empty directory! This means that our Git workflow will be slightly different.
 
-- **PartnerA**: Create the initial project on your local machine by executing the following commands:
+- Create the initial project on your local machine by executing the following commands:
 
 ```bash
 $ mkdir node-shell # create a new directory named `node-shell`
@@ -40,11 +40,7 @@ $ git commit -m "added bash.js file"
 $ git log # shows the commit you just made (optional - it's nice to see though!)
 ```
 
-- **PartnerA**: Go to Github and create a new Github repository for your project. Follow the usual instructions to push your local project up to your remote. When done, share the Github url with your partner.
-
-- **PartnerB**: Fork your partner's Github repo. Clone your fork to your machine.
-
-**Both partners**: add each other's Github repos as remotes for your local repos as usual!
+- Go to Github and create a new Github repository for your project. Follow the usual instructions to push your local project up to your remote.
 
 </details>
 
