@@ -35,7 +35,7 @@ Now that express is available, what can we do with it? THe biggest use of expres
 <summary>Hint: Requiring express and creating an app</summary>
 
 ```javascript
-const express = require('express');
+const express = require("express");
 const app = express();
 ```
 
@@ -68,7 +68,7 @@ Try running your app.js file with the node terminal command. If all is working, 
 Examples of endpoints:
 
 - `GET /`
-- `GET /puppies`
+- `GET /cars`
 - `POST /data`
 
 ##### Setting up a route in express
@@ -88,9 +88,8 @@ Check out the docs for app.METHOD [here](https://expressjs.com/en/4x/api.html#ap
 Example:
 
 ```javascript
-app.get('/', (req, res) => {
-  res.send(
-    (
+app.get("/", (req, res) => {
+  res.send(`
       <html>
         <head>
           <title>My site</title>
@@ -99,8 +98,7 @@ app.get('/', (req, res) => {
           <h1>Hello World</h1>
         </body>
       </html>
-    )``
-  );
+    `);
 });
 ```
 
@@ -108,17 +106,17 @@ In general, handler functions receive three objects: - `req`: and object represe
 
 ### Part 4: Practice
 
-- Set up 3 routes in your express app. They will respond to `GET` on the paths: `/`, `/puppies`, and `/kittens`.
+- Set up 3 routes in your express app. They will respond to `GET` on the paths: `/`, `/cars`, and `/trucks`.
 - When finished, you should be able to run your application (`node app.js`) and open it in the browser:
 
 <details>
 <summary>Hint: Here's the complete source code</summary>
 
 ```javascript
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
   res.send(`
     <html>
         <head>
@@ -130,11 +128,11 @@ app.get('/', (req, res) => {
     </html>`);
 });
 
-app.get('/cars', (req, res) => {
+app.get("/cars", (req, res) => {
   res.send(`cars`);
 });
 
-app.get('/trucks', (req, res) => {
+app.get("/trucks", (req, res) => {
   res.send(`trucks`);
 });
 
