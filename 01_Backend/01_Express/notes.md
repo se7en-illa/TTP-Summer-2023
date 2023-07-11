@@ -1,4 +1,4 @@
-# Servers / Express 
+# Servers / Express
 
 ## Node
 
@@ -17,51 +17,52 @@
 
 ### HTTP
 
+![HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages/httpmsgstructure2.png)
+
 - Hypertext Transfer Protocol (HTTP) is the foundation of any data exchange on the web
 - A protocol for trasnmitting resources (e.g. HTML, plain text, images, JSON)
   - Specifically, a client-server protocol, which means requests are initiated by the recipient, usually the Web browser
     - the messages sent by the client are called requests
     - the messages sent by the server as an answer is called responses
+- [MDN Example](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)
 
 ### Example Servers using Plain NodeJS
 
 Simple
 
 ```js
-const http = require("http")
-const server = http.createServer()
+const http = require("http");
+const server = http.createServer();
 
 server.on("request", (req, res) => {
-  res.writeHead(200)
-  res.write("<h1>Welcome to my website<h1>")
-  res.end()
-})
+  res.writeHead(200);
+  res.write("<h1>Welcome to my website<h1>");
+  res.end();
+});
 
-server.listen(3000, "localhost") 
+server.listen(3000, "localhost");
 ```
 
 More complex
 
 ```js
-const http = require("http")
-const server = http.createServer()
+const http = require("http");
+const server = http.createServer();
 
 server.on("request", (req, res) => {
-  if(req.method === "GET") {
-    res.writeHead(200)
-    res.write("<h1>Welcome to my main page<h1>")
-    res.end()
-  } else if(req.url === "/dogs") {
-    res.writeHead(200)
-    res.write("<h1>Welcome to my dogs page<h1>")
-    res.end()
+  if (req.method === "GET") {
+    res.writeHead(200);
+    res.write("<h1>Welcome to my main page<h1>");
+    res.end();
+  } else if (req.url === "/dogs") {
+    res.writeHead(200);
+    res.write("<h1>Welcome to my dogs page<h1>");
+    res.end();
   }
-})
+});
 
-server.listen(3000, "localhost") 
+server.listen(3000, "localhost");
 ```
-
-
 
 ## Express
 
@@ -74,24 +75,24 @@ server.listen(3000, "localhost")
 Simple
 
 ```js
-const express = require("express")
-const app = express()
-app.listen(3000)
+const express = require("express");
+const app = express();
+app.listen(3000);
 ```
 
 More complex
 
 ```js
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
 
-app.get("/", req, res, next => {
-  res.send("<h1>Welcome to the main page</h1>")
-})
+app.get("/", (req, res, next) => {
+  res.send("<h1>Welcome to the main page</h1>");
+});
 
-app.get("/dogs", req, res, next => {
-  res.send("<h1>Welcome to the dogs page</h1>")
-})
+app.get("/dogs", (req, res, next) => {
+  res.send("<h1>Welcome to the dogs page</h1>");
+});
 
-app.listen(3000)
+app.listen(3000);
 ```
