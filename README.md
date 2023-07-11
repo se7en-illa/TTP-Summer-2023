@@ -81,7 +81,6 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - Pre-reading:
     - [What is an API?](https://www.youtube.com/watch?v=tgbRY96q-KM)
     - [Backend Architecture](https://www.codecademy.com/article/back-end-architecture)
-  - Recording: [📺 click here]()
   - In-Class Lab: [Lab_ExpressBasics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/Lab_ExpressBasics/assignment.md)
 - [ ] July 12th: Express Extras
 - [ ] July 13th: JS Promises
