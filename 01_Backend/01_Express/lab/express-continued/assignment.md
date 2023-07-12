@@ -1,32 +1,77 @@
 # Solo Lab: Express.js Deep Dive
 
-In this lab, we will continue our exploration of Express.js, delving into middleware, routing, error handling, parameters, and more.
+### Introduction:
+
+In this lab, we're going to build on our basic understanding of Express.js. By now, you should be familiar with creating a basic Express server, defining routes, and sending responses. Now, let's delve into some advanced topics like middleware, routing, error handling, parameters, and more.
 
 ## Part 1: Setting Up The Project
 
 - Step 1: Create a new folder named `ExpressDeepDive` using the `mkdir` command.
-- Step 2: Navigate to the new directory and initiate a new Node.js project with a `package.json` file using `npm init -y`.
-- Step 3: Install Express, morgan (for logging), and body-parser (for parsing JSON request bodies) via npm:
+- Step 2: CD into your `ExpressDeepDive` directory. Normally, at this point, we would use `npm init` to create a `package.json` file, but this time we'll do something different.
+- Step 3: Install express-generator globally and run it to initialize your express application. Express generator will create a barebones Express.js application in the current directory. The created app will already have a basic routing setup and use the built-in middleware for parsing JSON and urlencoded data.
 
 ```zsh
-% npm install express morgan body-parser
+% npm install -g express-generator
+% npx express-generator
 ```
 
-## Part 2: Create Your Express App with create-express-app
-
-Create an express application by running the following command:
+- Step 4: Install dependencies
 
 ```zsh
-% npx create-express-app
+% npm install
 ```
 
-Follow the on-screen instructions to create the application.
+- Step 5: Run your application
 
-## Part 3: Routing with Express
+```zsh
+% DEBUG=expresstest:* npm start
+```
+
+## Part 2: Using Middleware
+
+Middleware are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. These functions can perform tasks like logging, parsing the request body, and handling errors.
+
+##### express.urlencoded
+
+This is a built-in middleware function in Express. It parses incoming requests with urlencoded payloads and is based on body-parser. It's already included in the boilerplate provided by express-generator.
+
+##### morgan
+
+Morgan is a HTTP request logger middleware for node.js. Let's use it in our app:
+
+- 1. Install Morgan:
+
+```zsh
+% npm install morgan
+```
+
+- 2. Navigate to your app.js file. Below the `app.use(express.static(path.join(__dirname, 'public')));` add the following:
+
+```javascript
+app.use(morgan("dev"));
+```
+
+##### Writing your own middleware
+
+- Create a simple middleware that logs the current date and time for each request.
+
+<details>
+<summary>Hint: Completed middleware</summary>
+
+```javascript
+app.use((req, res, next) => {
+  console.log("Request Time:", Date.now());
+  next();
+});
+```
+
+</details>
+
+## Part 3: Routing with Express Router
 
 Express provides a Router to manage different endpoints in a cleaner and isolated way. Let's create a router for an entity, say 'Books', with endpoints for `GET`, `POST`, `PUT` and `DELETE`.
 
-- Create a new folder called `routes` and within it, a new file called `bookRoutes.js`.
+- Create a new file called `bookRoutes.js` in the `*routes*` folder.
 - In `bookRoutes.js`, import express, initialize a new Router, and define the routes for `GET`, `POST`, `PUT`, and `DELETE`.
 
 <details>
@@ -57,7 +102,7 @@ module.exports = router;
 
 </details>
 
-- In your main `app.js` file, require `bookRoutes.js` and use it as middleware.
+- In your main `app.js` file, require and use your router.
 
 <details>
 <summary>Hint: Including and Using Routes</summary>
@@ -69,42 +114,6 @@ app.use("/books", bookRoutes);
 ```
 
 </details>
-
-## Part 4: Using Middleware
-
-In this section, we will create and use some middleware in our application. Middleware functions are functions that have access to the request object (req), the response object (res), and the next function in the application’s request-response cycle.
-
-- Create a middleware function that logs the current date and time, and the requested method and URL, before moving to the next middleware.
-
-<details>
-<summary>Hint: Example of Middleware Function</summary>
-
-```javascript
-const logger = (req, res, next) => {
-  console.log(`${Date.now()}: ${req.method} ${req.originalUrl}`);
-  next();
-};
-
-app.use(logger);
-```
-
-</details>
-
-- Use `morgan` as middleware for logging HTTP requests.
-
-```javascript
-const morgan = require("morgan");
-
-app.use(morgan("dev"));
-```
-
-- Use `body-parser` as middleware to parse incoming request bodies in a middleware before your handlers.
-
-```javascript
-const bodyParser = require("body-parser");
-
-app.use(bodyParser.json());
-```
 
 ## Part 5: Express Params and Error Handling
 
@@ -123,18 +132,7 @@ router.get("/:id", (req, res) => {
 
 </details>
 
-- Error handling in Express is done through middleware functions. Let's create a 404 error middleware function that sends an error message whenever an invalid endpoint is hit.
-
-<details>
-<summary>Hint: Example of Error Handling</summary>
-
-```javascript
-app.use((req, res, next) => {
-  res.status(404).send("404 - Not Found");
-});
-```
-
-</details>
+Express comes with a built-in error handler, which takes care of any errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. This is already included in your app.js file from the express-generator.
 
 ## Part 6: Testing
 
