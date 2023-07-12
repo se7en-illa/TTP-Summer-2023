@@ -71,6 +71,9 @@ server.listen(3000, "localhost");
   - Write handlers for requests with different HTTP verbs at different URl paths (routes)
 - Set common web application settings like the port to use for connecting
 - Add additional request processing "middleware" at any point within the request handling pipeline
+- Allows you to expose an API that clients can use to tell the server to do some work
+
+Resource: [Express Docs](https://expressjs.com/)
 
 Simple
 
@@ -86,13 +89,83 @@ More complex
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res, next) => {
+app.get("/", (req, res) => {
   res.send("<h1>Welcome to the main page</h1>");
 });
 
-app.get("/dogs", (req, res, next) => {
+app.get("/dogs", (req, res) => {
   res.send("<h1>Welcome to the dogs page</h1>");
 });
 
 app.listen(3000);
 ```
+
+### Route parameters
+
+_Route parameters are named URL segments that are used to capture the values specified at their position in the URL. The captured values are populated in the req.params object, with the name of the route parameter specified in the path as their respective keys._
+
+```js
+app.get("/users/:userId/books/:bookId", (req, res) => {
+  // parameters can be accessed via its key name within the params object
+  console.log("User id: ", req.params.userId);
+  console.log("Book id: ", req.params.bookId);
+
+  // this just sends a status code with no data in the http body
+  res.sendStatus(200);
+});
+```
+
+Resource: [Express Route Parameters](https://expressjs.com/en/guide/routing.html#route-parameters)
+
+### Method / Verb types
+
+_HTTP defines a set of request methods to indicate the desired action to be performed for a given resource._
+
+| HTTP Method | Intention  |
+| ----------- | ---------- |
+| POST        | **C**reate |
+| GET         | **R**ead   |
+| PUT         | **U**pdate |
+| DELETE      | **D**elete |
+
+```js
+// in express we can define our http routes to respond to a particular method
+//  by utilizing its corresponding method name (in lowercase)
+app.get("/", (req, res) => {
+  // ...
+});
+
+app.post("/", (req, res) => {
+  // ...
+});
+
+app.put("/", (req, res) => {
+  // ...
+});
+
+app.delete("/", (req, res) => {
+  // ...
+});
+```
+
+Resource: [MDN HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+
+### Middleware
+
+_Middleware functions are functions that have access to the request object (req), the response object (res), and the next middleware function in the application’s request-response cycle. The next middleware function is commonly denoted by a variable named next._
+
+Common middleware include:
+
+- [Express router](https://expressjs.com/en/guide/routing.html#express-router)
+- [Express body parser](https://expressjs.com/en/api.html#express.urlencoded)
+- [Express static](https://expressjs.com/en/api.html#express.static)
+- [Morgan](https://www.npmjs.com/package/morgan)
+- [Error Middleware](https://expressjs.com/en/guide/using-middleware.html#using-middleware)
+
+Resource: [Express Middleware](https://expressjs.com/en/guide/using-middleware.html#using-middleware)
+
+### Boilerplate
+
+_Boilerplate code is code that is necessary to have your application run that defines the structure of your application but does not encompass the business logic._
+
+Example: [Express Generator](https://expressjs.com/en/starter/generator.html#express-application-generator)
