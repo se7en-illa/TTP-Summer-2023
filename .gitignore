@@ -1,10 +1,6 @@
 # installed packages
 node_modules
-
-# future lectures
-00_foundations/03_CSS/Day_3/animate.css
-00_foundations/03_CSS/Day_3/tailwindcss
-00_foundations/03_CSS/Day_3/xp_98
+# 01_Backend/01_Express/lab/express-continued/completed-lab/node_modules
 
 # answer key for express deep dive lab
-01_Backend/01_Express/Lab_ExpressContinued/answer_key
+01_Backend/01_Express/lab/express-continued/completed-lab

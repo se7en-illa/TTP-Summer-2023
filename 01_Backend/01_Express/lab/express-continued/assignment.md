@@ -71,8 +71,8 @@ app.use((req, res, next) => {
 
 Express provides a Router to manage different endpoints in a cleaner and isolated way. Let's create a router for an entity, say 'Books', with endpoints for `GET`, `POST`, `PUT` and `DELETE`.
 
-- Create a new file called `bookRoutes.js` in the `*routes*` folder.
-- In `bookRoutes.js`, import express, initialize a new Router, and define the routes for `GET`, `POST`, `PUT`, and `DELETE`.
+- Create a new file called `books.js` in the `*routes*` folder.
+- In `books.js`, import express, initialize a new Router, and define the routes for `GET`, `POST`, `PUT`, and `DELETE`.
 
 <details>
 <summary>Hint: Example of Routing in Express</summary>
@@ -81,20 +81,31 @@ Express provides a Router to manage different endpoints in a cleaner and isolate
 const express = require("express");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.send("GET Books");
+// Implement the routes
+
+// GET /books
+router.get("/", function (req, res, next) {
+  res.send("GET request to /books");
 });
 
-router.post("/", (req, res) => {
-  res.send("POST Books");
+// POST /books
+router.post("/", function (req, res, next) {
+  res.send("POST request to /books");
 });
 
-router.put("/", (req, res) => {
-  res.send("PUT Books");
+// GET /books/:bookId
+router.get("/:bookId", function (req, res, next) {
+  res.send(`GET request to /books/${req.params.bookId}`);
 });
 
-router.delete("/", (req, res) => {
-  res.send("DELETE Books");
+// PUT /books/:bookId
+router.put("/:bookId", function (req, res, next) {
+  res.send(`PUT request to /books/${req.params.bookId}`);
+});
+
+// DELETE /books/:bookId
+router.delete("/:bookId", function (req, res, next) {
+  res.send(`DELETE request to /books/${req.params.bookId}`);
 });
 
 module.exports = router;
@@ -134,31 +145,52 @@ router.get("/:id", (req, res) => {
 
 Express comes with a built-in error handler, which takes care of any errors that might be encountered in the app. This default error-handling middleware function is added at the end of the middleware function stack. This is already included in your app.js file from the express-generator.
 
-## Part 6: Testing
+### Part 6: Testing the Routes
 
-Test your application by running `node app.js` and sending requests using curl or a tool like Postman or Insomnia to ensure that everything is working as expected.
+Testing is a crucial part of developing any web application. It ensures that your app is working correctly and that it can handle expected and unexpected user interactions. In this section, you will learn how to manually test your routes.
 
-You should be able to:
+There are various ways to send HTTP requests to your application and test the routes, but we will use two common methods: the web browser and the command-line tool `curl`.
 
-- See the log from your custom logger middleware and morgan in the console.
-- Send a JSON POST request to your `/books` endpoint and get the JSON echoed back.
-- Fetch a book with a particular `id` using the `/books/:id` GET endpoint.
-- Hit an invalid endpoint and receive a 404 response.
+#### Method 1: Web Browser
 
-<details>
-<summary>Hint: Testing with curl </summary>
-To test the POST endpoint, you can send a JSON object using Postman, Insomnia, or curl:
+For GET requests, you can easily use a web browser. You just need to navigate to the URL of your application (for example, `http://localhost:3000/books`). The browser will automatically send a GET request to that route.
 
-```zsh
-curl -X POST -H "Content-Type: application/json" -d '{"name":"Test Book", "author":"Test Author"}' http://localhost:3000/books
-```
+#### Method 2: Curl
 
-And for testing the GET, PUT, and DELETE methods for individual books by id, you can replace :id with an actual id. For example:
+Curl is a powerful command-line tool used to transfer data using various network protocols. It can send HTTP requests to a server, which makes it a great tool for testing routes.
+
+Here are some example curl commands for each of the HTTP methods:
+
+##### GET
 
 ```zsh
-curl http://localhost:3000/books/123
+curl http://localhost:3000/books
 ```
 
-</details>
+##### POST
+
+```zsh
+curl -X POST -H "Content-Type: application/json" -d '{"title":"Example Book", "author":"John Doe"}' http://localhost:3000/books
+```
+
+##### PUT
+
+```zsh
+curl -X PUT -H "Content-Type: application/json" -d '{"title":"New Book Title", "author":"Jane Doe"}' http://localhost:3000/books/1
+```
+
+##### DELETE
+
+```zsh
+curl -X DELETE http://localhost:3000/books/1
+```
+
+To run these commands, open a new terminal window (do not stop your running Express app), paste the command, and hit ENTER.
+
+Remember to replace `"Example Book"`, `"John Doe"`, `"New Book Title"`, and `"Jane Doe"` with the actual data you want to send. Also, replace `1` with the actual ID of the book you want to update or delete.
+
+Take the time to test all your routes to ensure they work as expected. If a route doesn't return what you expect, review your route handling code, restart your server, and try again.
+
+### Part 6: Wrapping Up
 
 Well done! You've now deepened your understanding of Express.js by using middleware, defining complex routes, handling errors, and using parameters. Keep practicing to reinforce these skills.
