@@ -75,15 +75,16 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 - [x] July 10th: Terminal Review + Node.js - **Project #2 Due**
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/LQUlR0HlszNG98dNgRb40LYI66DWSLl5g_KUs9wJ60ZM1m5B6BEQ2uFYF4zhrRUf.oZCp2SYexZxFQfhE)
-  - In-class Lab: [SoloLab_NodeBasics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/00_Node/SoloLab_NodeBasics/assignment.md)
-  - Homework: [HWLab_NodeShell](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/00_Node/HWLab_NodeShell/Assignment.md)
+  - In-class Lab: [node-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/00_Node/lab/node-basics/assignment.md)
+  - Homework: [node-shell](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/00_Node/lab/node-shell/assignment.md)
 - [x] July 11th: Intro to Express
   - Pre-reading:
     - [What is an API?](https://www.youtube.com/watch?v=tgbRY96q-KM)
     - [Backend Architecture](https://www.codecademy.com/article/back-end-architecture)
+  - In-Class Lab: [express-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/lab/express-basics/assignment.md)
   - Recording: [📺 click here](https://youtu.be/UR9HCXy2fX0)
-  - In-Class Lab: [Lab_ExpressBasics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/Lab_ExpressBasics/assignment.md)
 - [ ] July 12th: Express Extras
+  - In-Class Lab: [express-continued](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/lab/express-continued/assignment.md)
 - [ ] July 13th: JS Promises
 
 ###### W5:

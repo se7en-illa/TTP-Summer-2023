@@ -129,7 +129,7 @@ app.use("/books", bookRoutes);
 
 Params in Express refer to URL parameters which are named segments of the URL, delimited by slashes (/). They capture the values specified at their position in the URL.
 
-- In your `bookRoutes.js`, modify the `GET` method to fetch a book based on its `id` from params.
+- In your `books.js`, modify the `GET` method to fetch a book based on its `id` from params.
 
 <details>
 <summary>Hint: Example of Using Params</summary>
