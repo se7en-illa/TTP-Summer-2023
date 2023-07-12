@@ -11,7 +11,6 @@ In this lab, we're going to build on our basic understanding of Express.js. By n
 - Step 3: Install express-generator globally and run it to initialize your express application. Express generator will create a barebones Express.js application in the current directory. The created app will already have a basic routing setup and use the built-in middleware for parsing JSON and urlencoded data.
 
 ```zsh
-% npm install -g express-generator
 % npx express-generator
 ```
 
