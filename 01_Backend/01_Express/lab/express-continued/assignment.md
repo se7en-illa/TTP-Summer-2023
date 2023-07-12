@@ -47,7 +47,7 @@ Morgan is a HTTP request logger middleware for node.js. Let's use it in our app:
 - 2. Navigate to your app.js file. Below the `app.use(express.static(path.join(__dirname, 'public')));` add the following:
 
 ```javascript
-app.use(morgan("dev"));
+app.use(logger("dev"));
 ```
 
 ##### Writing your own middleware
