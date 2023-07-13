@@ -20,7 +20,7 @@ Important note: Right now, there will be no persistent database in our applicati
 
 ### Setup
 
-Start off by forking and cloning [this repository]().
+Start off by forking and cloning [this repository](https://github.com/se7en-illa/pokedex-boilerplate).
 
 ### Project Structure
 
@@ -72,9 +72,11 @@ Here's the general form:
 
 ##### morgan
 
-One of the most popular logging middlewares is morgan, created by the express team. Passing it to app.use() makes it intercept all request and responses - every time you send a response, Morgan logs the request and response information. Morgan is also very configurable, with lot's of "modes" (we recommend using the "dev" mode during development). For example, after installing morgan (npm install morgan):
+One of the most popular logging middlewares is morgan, created by the express team. Passing it to app.use() makes it intercept all request and responses - every time you send a response, Morgan logs the request and response information. Morgan is also very configurable, with lot's of "modes" (we recommend using the "dev" mode during development). For example, after installing morgan (`npm install morgan`):
 
 ```javascript
+const morgan = require("morgan");
+
 app.use(morgan("dev"));
 ```
 
@@ -82,6 +84,7 @@ app.use(morgan("dev"));
 
 <details>
 <summary><h3>Part 3: Non-Persistent Server-Side Data Storage</h3></summary>
+
 ### Setting up a pokeBank.js module
 
 Great - The application is all set up and you have a sample route. We need data for our real routes, though. In the future we will integrate our Pokedex with a proper database management system, but for now we will create a provisory way to store the information:
@@ -98,6 +101,7 @@ const data = [
   {
     id: 1,
     name: "Pikachu",
+    image: "",
     type: "Electric",
     trainer: "Ash",
     date: new Date(Date.now() - 15000000),
@@ -105,6 +109,7 @@ const data = [
   {
     id: 2,
     name: "Charizard",
+    image: "",
     type: "Fire/Flying",
     trainer: "Ash",
     date: new Date(Date.now() - 90000000),
@@ -112,6 +117,7 @@ const data = [
   {
     id: 3,
     name: "Bulbasaur",
+    image: "",
     type: "Grass/Poison",
     trainer: "Ash",
     date: new Date(Date.now() - 80000000),
@@ -119,6 +125,7 @@ const data = [
   {
     id: 4,
     name: "Squirtle",
+    image: "",
     type: "Water",
     trainer: "Ash",
     date: new Date(Date.now() - 70000000),
@@ -126,6 +133,7 @@ const data = [
   {
     id: 5,
     name: "Jigglypuff",
+    image: "",
     type: "Normal/Fairy",
     trainer: "Misty",
     date: new Date(Date.now() - 60000000),
@@ -133,6 +141,7 @@ const data = [
   {
     id: 6,
     name: "Gengar",
+    image: "",
     type: "Ghost/Poison",
     trainer: "Brock",
     date: new Date(Date.now() - 50000000),
@@ -140,6 +149,7 @@ const data = [
   {
     id: 7,
     name: "Eevee",
+    image: "",
     type: "Normal",
     trainer: "Gary",
     date: new Date(Date.now() - 40000000),
@@ -147,6 +157,7 @@ const data = [
   {
     id: 8,
     name: "Snorlax",
+    image: "",
     type: "Normal",
     trainer: "Ash",
     date: new Date(Date.now() - 30000000),
@@ -154,6 +165,7 @@ const data = [
   {
     id: 9,
     name: "Mewtwo",
+    image: "",
     type: "Psychic",
     trainer: "Red",
     date: new Date(Date.now() - 20000000),
@@ -161,6 +173,7 @@ const data = [
   {
     id: 10,
     name: "Lugia",
+    image: "",
     type: "Psychic/Flying",
     trainer: "Silver",
     date: new Date(Date.now() - 10000000),
