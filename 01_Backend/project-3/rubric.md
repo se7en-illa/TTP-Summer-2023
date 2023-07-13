@@ -1,6 +1,7 @@
 <details>
   <summary><h3>Grading Rubric</h3></summary>
   <p><b>Description</b>: Below you'll find how this project will be graded, based on the tasks stated above. Make sure the<br></p>
+  - <b>Make sure to connect your cloned repo to your main repo so TAs can grade your assignments</b> <br> <br>
   <p><b>Total points (not including extra credit): </b>50</p>
   <ul>
     <li>Part 1: Setup (<b>5 points</b>) 
