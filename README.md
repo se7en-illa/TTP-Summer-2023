@@ -88,6 +88,7 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - In-Class Lab: [express-continued](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/lab/express-continued/assignment.md)
 - [ ] July 13th: JS Promises
   - In-Class Lab: [async-await](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/02_Promises/lab/assignment.md)
+  - Project #3: [pokedex-version-1](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/project-3/assignment.md)
 
 ###### W5:
 
