@@ -19,7 +19,11 @@ Code example
 ```js
 // what will the output of the following code be
 console.log("One");
-setTimeout(() => console.log("Two"), 0);
+
+setTimeout(function () {
+  console.log("Two");
+}, 1000);
+
 console.log("Three");
 ```
 
@@ -103,5 +107,5 @@ const tryGetRich = async () => {
   }
 };
 ```
-[Examples](https://github.com/orlandocaraballo/class-examples/tree/master/promises)
 
+[Examples](https://github.com/orlandocaraballo/class-examples/tree/master/promises)
