@@ -13,7 +13,7 @@ In this lab you will learn:
 
 ##### Creating the repo:
 
-- Clone [this repo]() to your local computer
+- Clone [this repo](https://github.com/se7en-illa/lab_async) to your local computer
 - Navigate into the project and open it in VScode
 
 ##### Installing the dependencies
