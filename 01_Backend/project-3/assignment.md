@@ -689,3 +689,13 @@ NOTE: EDITOR SUPPORT FOR SYNTAX HIGHLIGHT INSIDE TAGGED TEMPLATE LITERALS:
     </ul>
   </ul>
 </details>
+
+<details>
+    <summary><h3>Finished Project (Part 1)</h3></summary>
+    <img src="https://github.com/se7en-illa/TTP-Summer-2023/assets/71786791/ec13e64a-eb82-4b62-9083-63bd6a66b711" >
+</details>
+
+<details>
+    <summary><h3>Finished Project (Part 2)</h3></summary>
+    <img src="https://github.com/se7en-illa/TTP-Summer-2023/assets/71786791/cebcf4d1-e89e-40a8-96fe-31200ee5b34b" >
+</details>
