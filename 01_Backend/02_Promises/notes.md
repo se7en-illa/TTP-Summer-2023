@@ -108,4 +108,4 @@ const tryGetRich = async () => {
 };
 ```
 
-[Examples](https://github.com/orlandocaraballo/class-examples/tree/master/promises)
+[Promise Examples](https://github.com/orlandocaraballo/class-examples/tree/master/promises)
