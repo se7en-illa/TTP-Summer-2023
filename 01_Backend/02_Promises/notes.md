@@ -2,11 +2,6 @@
 
 ## Asynchronicity
 
-- Nodejs definition with
-- Event loop
-- Asynchronicity
-- Files vs Promise w/ Example
-
 ### Asynchronous Code
 
 Asynchronous (aka async) literally means "happening at disconnected times."
@@ -22,6 +17,7 @@ Common examples:
 Code example
 
 ```js
+// what will the output of the following code be
 console.log("One")
 setTimeout(() => console.log("Two", 10)
 console.log("Three")
@@ -57,8 +53,9 @@ const tryGetRich = () => {
     nums.forEach((num) => {
       bookmaker.getHorse(num, (err, horse) => {
         bookmaker.bet(horse, (err, success) => {
+          // we are officially in callback hell 😈🔥
           if (success) {
-            // 😥
+            console.log("😥");
           }
         });
       });
