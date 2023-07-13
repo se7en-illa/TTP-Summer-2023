@@ -18,9 +18,9 @@ Code example
 
 ```js
 // what will the output of the following code be
-console.log("One")
-setTimeout(() => console.log("Two", 10)
-console.log("Three")
+console.log("One");
+setTimeout(() => console.log("Two"), 0);
+console.log("Three");
 ```
 
 ### Event Loop
@@ -69,6 +69,7 @@ const tryGetRich = () => {
 _A Promise is a Javascript object that represents the eventual result of an asynchronous operation._
 
 A promise object has two important properties:
+
 - state - "pending" | "fulfilled" | "rejected"
 - result - undefined | resulting value | error object
 
@@ -79,7 +80,7 @@ const tryGetRich = () => {
   nums.forEach((num) => {
     bookmaker.bet(horse, (err, success) => {
       if (success) {
-        console.log("I'm rich!)
+        console.log("I'm rich!");
       }
     });
   });
@@ -90,13 +91,15 @@ const tryGetRich = () => {
 
 ```js
 const tryGetRich = async () => {
-  const num = await readFileAsync("/luckyNumber.txt");
-  const success = await bookmaker.bet(num);
+  try {
+    const num = await readFileAsync("/luckyNumber.txt");
+    const success = await bookmaker.bet(num);
 
-  if (success) {
-    console.log("I'm rich!");
+    if (success) {
+      console.log("I'm rich!");
+    }
+  } catch (error) {
+    console.err(error);
   }
 };
 ```
-
-
