@@ -87,6 +87,7 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/Ve230RZXDNdIqPBADflCMAgL9ScGlY0pGvZ1QWum8JM2FrvQ13LwdpWJUh9mLwRE.zHXqX1t9ZhS4oQ8J)
   - In-Class Lab: [express-continued](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/lab/express-continued/assignment.md)
 - [ ] July 13th: JS Promises
+  - In-Class Lab: [async-await](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/02_Promises/lab/assignment.md)
 
 ###### W5:
 
