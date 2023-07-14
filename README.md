@@ -84,18 +84,20 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - In-Class Lab: [express-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/lab/express-basics/assignment.md)
   - Recording: [📺 click here](https://youtu.be/UR9HCXy2fX0)
 - [x] July 12th: Express Extras
-  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/Ve230RZXDNdIqPBADflCMAgL9ScGlY0pGvZ1QWum8JM2FrvQ13LwdpWJUh9mLwRE.zHXqX1t9ZhS4oQ8J)
   - In-Class Lab: [express-continued](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/01_Express/lab/express-continued/assignment.md)
-- [ ] July 13th: JS Promises
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/Ve230RZXDNdIqPBADflCMAgL9ScGlY0pGvZ1QWum8JM2FrvQ13LwdpWJUh9mLwRE.zHXqX1t9ZhS4oQ8J)
+- [x] July 13th: JS Promises - **_IN-PERSON CLASS @ JJay_**
   - In-Class Lab: [async-await](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/02_Promises/lab/assignment.md)
   - Project #3: [pokedex-version-1](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/project-3/assignment.md)
+  - Recording: [📺 click here]()
+- [ ] July 14th: Office Hours
 
 ###### W5:
 
-- [ ] July 17th: TBD
-- [ ] July 18th: TBD
-- [ ] July 19th: TBD
-- [ ] July 20th: TBD
+- [ ] July 17th: Intro to Databases - **Project #3 Due**
+- [ ] July 18th: PostgreSQL
+- [ ] July 19th: Sequelize
+- [ ] July 20th: Sequelize & Express Review - **_IN-PERSON CLASS @ JJay_**
 
 #### Phase 3: React & Redux
 
