@@ -38,7 +38,7 @@ In the following exercise, we will learn how to use them.
 - Copy the following into fileA.js:
 
 ```javascript
-const exportsFromFileB = require('./fileB'); // note the relative file path
+const exportsFromFileB = require("./fileB"); // note the relative file path
 console.log(exportsFromFileB);
 ```
 
@@ -59,8 +59,8 @@ console.log(exportsFromFileB);
 - Copy the following into _fileB.js_
 
 ```javascript
-module.exports.foo = 'hello world';
-module.exports.bar = 'goodbye world';
+module.exports.foo = "hello world";
+module.exports.bar = "goodbye world";
 ```
 
 - Execute _fileA.js_ again. What do you see? Try changing it so that you log _exportsFromFileB.foo_ or _exportsFromFileB.bar_
@@ -92,7 +92,7 @@ module.exports = () => {
 ##### fileA.js
 
 ```javascript
-const exportsFromFileB = require('./fileB');
+const exportsFromFileB = require("./fileB");
 exportsFromFileB();
 ```
 
@@ -115,14 +115,14 @@ exportsFromFileB();
 ##### fileB.js
 
 ```javascript
-console.log('fileB is being run!');
+console.log("fileB is being run!");
 ```
 
 ##### fileA.js
 
 ```javascript
-require('./fileB');
-require('./fileB'); // not a typo - actually require it twice!
+require("./fileB");
+require("./fileB"); // not a typo - actually require it twice!
 ```
 
 - How many times do you think "fileB is being run!" will log to the console?
@@ -145,8 +145,8 @@ This is because Node only ever executes a file that's being required once. The f
 #### Snippet 1
 
 ```javascript
-const dogs = 'I love dogs!';
-const cats = 'I love cats!';
+const dogs = "I love dogs!";
+const cats = "I love cats!";
 
 module.exports.dogs = dogs;
 module.exports.cats = cats;
@@ -165,8 +165,8 @@ You should see an object with a dogs key-value pair and cats key-value pair. Rem
 #### Snippet 2
 
 ```javascript
-const dogs = 'I love dogs!';
-const cats = 'I love cats!';
+const dogs = "I love dogs!";
+const cats = "I love cats!";
 
 module.exports = {
   dogs: dogs,
@@ -187,8 +187,8 @@ You should once again see an object with a dogs key-value pair and cats key-valu
 #### Snippet 3
 
 ```javascript
-const dogs = 'I love dogs!';
-const cats = 'I love cats!';
+const dogs = "I love dogs!";
+const cats = "I love cats!";
 
 module.exports = dogs;
 module.exports = cats;
