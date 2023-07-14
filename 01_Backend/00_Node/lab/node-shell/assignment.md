@@ -83,14 +83,14 @@ bash.js
 
 ```javascript
 // Output a prompt
-process.stdout.write('prompt > ');
+process.stdout.write("prompt > ");
 
 // The stdin 'data' event fires after a user types in a line
-process.stdin.on('data', (data) => {
+process.stdin.on("data", (data) => {
   const cmd = data.toString().trim(); // remove the newLine
 
-  process.stdout.write('You typed: ' + cmd);
-  process.stdout.write('\nprompt > ');
+  process.stdout.write("You typed: " + cmd);
+  process.stdout.write("\nprompt > ");
 });
 ```
 
@@ -204,7 +204,7 @@ In bash.js, you can access pwd.js like so:
 
 ```javascript
 // we can access the pwd function and store it in a variable like so
-const pwd = require('./pwd');
+const pwd = require("./pwd");
 
 // if a user enters 'pwd' as an argument, we can then call it
 pwd();
@@ -237,12 +237,12 @@ You got this!
 
 ```javascript
 // files will be an array of filenames, like ['bash.js', 'pwd.js']
-fs.readdir('./', 'utf8', (err, files) => {
+fs.readdir("./", "utf8", (err, files) => {
   if (err) {
     throw err;
   } else {
-    process.stdout.write(files.join('\n'));
-    process.stdout.write('prompt > ');
+    process.stdout.write(files.join("\n"));
+    process.stdout.write("prompt > ");
   }
 });
 ```
@@ -380,11 +380,11 @@ Here's an example with ls:
 
 ```javascript
 module.exports = (done) => {
-  fs.readdir('./', 'utf8', (err, files) => {
+  fs.readdir("./", "utf8", (err, files) => {
     if (err) {
-      done('Something went wrong!');
+      done("Something went wrong!");
     } else {
-      done(files.join('\n'));
+      done(files.join("\n"));
     }
   });
 };
