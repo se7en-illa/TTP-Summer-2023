@@ -27,7 +27,7 @@ app.get("/books/:bookId/users/:userId/:name", (req, res) => {
 app.post("/", (req, res, next) => {
   console.log(req.body);
 
-  if (req.body.name !== "Denisse") {
+  if (req.body.name !== "Alex") {
     return next(new Error("Some error"));
   }
 
