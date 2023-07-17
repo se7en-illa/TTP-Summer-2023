@@ -1,7 +1,7 @@
 // using HTTP module
 
-// const http = require("http");
-// const server = http.createServer();
+const http = require("http");
+const server = http.createServer();
 
 // simple example
 // server.on("request", (req, res) => {
@@ -40,6 +40,12 @@ app.get("/dogs", (req, res, next) => {
   res.send("<h1>Welcome to the dogs page</h1>");
 });
 
+app.post("/cats", (req, res) => {
+  res.send("<h2>Welcome to the cats page</h2>")
+});
+
 app.listen(PORT, () => {
   console.log(`The server is running on port ${PORT}`);
 });
+
+server.listen(PORT, "localhost");

@@ -1,17 +1,23 @@
+const http = require("http");
+const server = http.createServer();
+
 const express = require("express");
 const app = express();
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
+  // res.send(`
+  //   <html>
+  //     <head>
+  //       <title>Cars and Trucks</title>
+  //     </head>
+  //     <body>
+  //       <h1>The latest cars and trucks!</h1>
+  //     </body>
+  //   </html>
+  // `);
   res.send(`
-    <html>
-      <head>
-        <title>Cars and Trucks</title>
-      </head>
-      <body>
-        <h1>The latest cars and trucks!</h1>
-      </body>
-    </html>
-  `);
+  <h1>Hello</h1>
+  `)
 });
 
 app.get("/cars", (req, res) => {
@@ -23,6 +29,9 @@ app.get("/trucks", (req, res) => {
 });
 
 const PORT = 1337;
+
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
+
+server.listen(PORT, "localhost");
