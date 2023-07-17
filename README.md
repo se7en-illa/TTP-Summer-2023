@@ -90,11 +90,12 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - In-Class Lab: [async-await](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/02_Promises/lab/assignment.md)
   - Project #3: [pokedex-version-1](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/project-3/assignment.md)
   - Recording: [📺 click here]()
-- [ ] July 14th: Office Hours
+- [x] July 14th: Office Hours
 
 ###### W5:
 
 - [ ] July 17th: Intro to Databases - **Project #3 Due**
+  - In-Class Lab: [database-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/lab/database-basics/assignment.md)
 - [ ] July 18th: PostgreSQL
 - [ ] July 19th: Sequelize
 - [ ] July 20th: Sequelize & Express Review - **_IN-PERSON CLASS @ JJay_**
