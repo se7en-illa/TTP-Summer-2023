@@ -24,16 +24,8 @@ PostgreSQL uses a command-line utility named `psql` for interacting with the dat
 
 - Step 1: Start `psql`.
 
-_For Ubuntu/WSL_:
-
 ```bash
-sudo -u postgres psql
-```
-
-_For macOS_:
-
-```bash
-psql postgres
+psql
 ```
 
 - Step 2: In the `psql` interface, list all databases.
@@ -58,6 +50,12 @@ CREATE DATABASE test_db;
 
 ```SQL
 CREATE TABLE test_table (name VARCHAR(20), age INT);
+```
+
+- (optional): Check all available tables in the current database.
+
+```SQL
+\d
 ```
 
 - Step 6: Insert data into the `test_table`.
