@@ -1,5 +1,3 @@
-Certainly, here's the revised lab that includes instructions for Ubuntu, macOS, and Windows using WSL:
-
 # Solo Lab: PostgreSQL Basics
 
 ### Part 1: PostgreSQL and Daemons
@@ -18,56 +16,7 @@ By default, PostgreSQL listens on port 5432. This is important as we will need t
 
 ### Part 3: Installation
 
-Let's start by installing PostgreSQL on your system. The installation instructions depend on your operating system.
-
-_For Ubuntu/WSL_:
-
-- Step 1: Open a WSL terminal if you are using Windows.
-- Step 2: Update your local package index.
-
-```bash
-sudo apt update
-```
-
-- Step 3: Install PostgreSQL and its additional utilities.
-
-```bash
-sudo apt install postgresql postgresql-contrib
-```
-
-_For macOS_ (using Homebrew):
-
-- Step 1: Update Homebrew.
-
-```bash
-brew update
-```
-
-- Step 2: Install PostgreSQL.
-
-```bash
-brew install postgresql
-```
-
-After installation, PostgreSQL service will start automatically. You can check its status with:
-
-_For Ubuntu/WSL_:
-
-```bash
-sudo systemctl status postgresql
-```
-
-If you see an error like "System has not been booted with systemd as init system (PID 1). Can't operate.", you'll need to manually start the PostgreSQL service using the following command:
-
-```bash
-sudo service postgresql start
-```
-
-_For macOS_:
-
-```bash
-brew services list
-```
+Let's start by installing PostgreSQL on your system. The installation instructions depend on your operating system. Please visit [this link](https://gist.github.com/orlandocaraballo/95f1f9f33c93df4e75d4b230a1290cfa) for Orlando's installation guide.
 
 ### Part 4: Basic Usage
 
