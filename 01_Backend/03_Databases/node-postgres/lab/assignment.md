@@ -52,6 +52,12 @@ CREATE DATABASE test_db;
 CREATE TABLE test_table (name VARCHAR(20), age INT);
 ```
 
+- (optional): Check all available tables in the current database.
+
+```SQL
+\d
+```
+
 - Step 6: Insert data into the `test_table`.
 
 ```SQL
