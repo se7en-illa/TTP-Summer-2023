@@ -94,12 +94,15 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 ###### W5:
 
-- [ ] July 17th: Intro to Databases - **Project #3 Due**
+- [x] July 17th: Intro to Databases - **Project #3 Due**
   - In-Class Lab: [database-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/lab/database-basics/assignment.md)
-- [ ] July 18th: PostgreSQL
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/2M1Btt7Gy3bDYOagE4rYMh5cTOJ4IFM1XXPjAXhHeoCx9bzyXATOdi_IHXGyO3cu.QA743ffLP6KYaq0e)
+- [x] July 18th: PostgreSQL
   - In-Class Lab: [postgres-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/lab/postgres-basics/assignment.md)
-- [ ] July 19th: Sequelize
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/BMPzjDcLCENWtCOO9-xoi1_4K4UrMKBnRe6IQQF7ajiCt27kYPimw0kZCSrcpev4.3ibb5YoPiJg0r-Gy)
+- [x] July 19th: Sequelize
   - In-Class Lab: [sequelize-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/sequelize-basics/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/WoK1BkA2IFmixUAE-hkj4Jt8GCm3y_YxuA_EZde3OqTbq-Rsq4lUw5af9oXNZ_sR.pOeMMMMwa9OF-8i4)
 - [ ] July 20th: Sequelize & Express Review
 
 #### Phase 3: React & Redux
