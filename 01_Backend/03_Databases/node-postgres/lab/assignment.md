@@ -49,7 +49,11 @@ CREATE DATABASE test_db;
 - Step 5: Create a new table named `test_table`.
 
 ```SQL
-CREATE TABLE test_table (name VARCHAR(20), age INT);
+CREATE TABLE test_table (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(20),
+  age INT
+);
 ```
 
 - (optional): Check all available tables in the current database.
