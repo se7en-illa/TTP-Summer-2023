@@ -13,7 +13,7 @@ _An ORM is a program used to convert data between incompatible type systems usin
 - Sequelize is an Object-Relational Mapper (ORM)
 - Access SQL databases from Node.js
 - Using JS objects and methods instead of SQL statements
-- Represents tables as "classes" and rows as objects (instances)
+- Represents tables as "models" (classes) and rows as instances (objects)
 
 ## `pg` vs `Sequelize`
 
@@ -73,19 +73,19 @@ const db = new Sequelize("postgres://localhost/dogs");
 Create a new model / table
 
 ```js
-const Dog = Sequelize.define("dog", {
+const Dog = db.define("dog", {
   name: Sequelize.STRING,
   age: Sequelize.INTEGER,
 });
 
 // actually connects to the database
-await Dog.sync();
+await Dog.sync({ force: true });
 ```
 
 Create a new model / table (alternative)
 
 ```js
-const Dog = Sequelize.define("dog", {
+const Dog = db.define("dog", {
   name: {
     type: Sequelize.STRING,
     allowNull: false,
@@ -96,7 +96,7 @@ const Dog = Sequelize.define("dog", {
 });
 
 // actually connects to the database
-await Dog.sync();
+await Dog.sync({ force: true });
 ```
 
 Create a new record
@@ -130,7 +130,7 @@ Find one dog by primary key
 
 ```js
 // returns a dog instance
-const dog = await Dog.findByPk(2); // find 10th dog
+const dog = await Dog.findByPk(2); // find 2nd dog
 
 console.log(dog.age); // displays dog age to terminal
 ```
@@ -178,6 +178,12 @@ and let's assume we have created the following models
 - `Profile`
 - `Order`
 - `Product`
+
+### Magic / Special methods
+
+_When an association is defined between two models, the instances of those models gain special methods to interact with their associated counterparts._
+
+Let's see some examples below 👇🏽
 
 ### One to one
 
