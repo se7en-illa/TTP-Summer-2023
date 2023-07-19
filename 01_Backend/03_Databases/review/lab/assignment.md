@@ -8,13 +8,34 @@ Let's start a new node project from scratch and create an express app.
 
 - Step 1: Create a new folder using `mkdir` in your terminal. Name it `ExpressSequelizeIntegration`.
 - Step 2: Add a `package.json` file. You can create this by running `npm init -y` in your terminal.
-- Step 3: Install express, sequelize, pg and pg-hstore by running in your terminal:
+- Step 3: Install express, sequelize, pg, pg-hstore, and dotenv by running in your terminal:
 
 ```zsh
-% npm install express sequelize pg pg-hstore
+% npm install express sequelize pg pg-hstore dotenv
 ```
 
-## Part 2: Initializing Express and Sequelize
+## Part 2: Creating a PostgreSQL Database
+
+1. Create a new PostgreSQL database named `student_db`.
+
+```zsh
+% createdb student_db
+```
+
+2. Connect to your new database and create two tables: `students` and `courses`. `students` should have columns `id`, `name`, and `email`, and `courses` should have columns `id`, `course_name`, and `course_code`. `id` should be the primary key in both tables.
+
+## Part 3: Configuring Environment Variables
+
+- Create a `.env` file in your project root.
+- Inside the `.env` file, add a DATABASE_URL variable and set its value to your postgres connection string.
+
+```
+DATABASE_URL=postgres://username:password@localhost:5432/student_db
+```
+
+Make sure to replace `username`, `password`, `localhost`, `5432`, and `student_db` with your own Postgres configuration.
+
+## Part 4: Initializing Express and Sequelize
 
 1. In your `ExpressSequelizeIntegration` directory, create a file called `app.js`.
 2. Now, we want to require express and sequelize. Instantiate express and sequelize with your postgres configuration.
@@ -23,47 +44,44 @@ Let's start a new node project from scratch and create an express app.
 <summary>Hint: Requiring express and sequelize, initializing sequelize</summary>
 
 ```javascript
+require("dotenv").config();
 const express = require("express");
 const Sequelize = require("sequelize");
 
 const app = express();
-const sequelize = new Sequelize(
-  "postgres://username:password@localhost:5432/dbname"
-);
+const sequelize = new Sequelize(process.env.DATABASE_URL);
 ```
-
-Note: Replace `username`, `password`, `localhost`, `5432` and `dbname` with your own Postgres configuration.
 
 </details>
 
-## Part 3: Models and Associations
+## Part 5: Models and Associations
 
-In this part, let's create two models: User and BlogPost. The relationship between these models is "one-to-many", meaning a User can have multiple BlogPosts, but a BlogPost can only belong to one User.
+In this part, let's create two models: Student and Course. The relationship between these models is "many-to-many", meaning a Student can be enrolled in multiple Courses, and a Course can have multiple Students.
 
-- Step 1: Create `User` and `BlogPost` models using Sequelize's `define` method.
+- Step 1: Create `Student` and `Course` models using Sequelize's `define` method.
 - Step 2: Define the association between the two models.
 
 <details>
 <summary>Hint: Creating models and defining associations</summary>
 
 ```javascript
-const User = sequelize.define("user", {
-  username: Sequelize.STRING,
+const Student = sequelize.define("student", {
+  name: Sequelize.STRING,
   email: Sequelize.STRING,
 });
 
-const BlogPost = sequelize.define("blogpost", {
-  title: Sequelize.STRING,
-  content: Sequelize.TEXT,
+const Course = sequelize.define("course", {
+  course_name: Sequelize.STRING,
+  course_code: Sequelize.STRING,
 });
 
-User.hasMany(BlogPost); // Set one-to-many relationship
-BlogPost.belongsTo(User); // Set one-to-one relationship with User
+Student.belongsToMany(Course, { through: "StudentCourses" });
+Course.belongsToMany(Student, { through: "StudentCourses" });
 ```
 
 </details>
 
-## Part 4: Sync Models with Database
+## Part 6: Sync Models with Database
 
 - Step 1: Sync models with the database using Sequelize's `sync` method. This will create tables in the database according to your models.
 
@@ -81,12 +99,12 @@ sequelize
 
 </details>
 
-## Part 5: Express Routes and Sequelize Queries
+## Part 7: Express Routes and Sequelize Queries
 
 We will create two routes:
 
-- `GET /users`: This route should respond with all users.
-- `POST /users`: This route should create a new user.
+- `GET /students`: This route should respond with all students.
+- `POST /students`: This route should create a new student.
 
 In these routes, use Sequelize to query the database.
 
@@ -98,22 +116,22 @@ In these routes, use Sequelize to query the database.
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/users", (req, res) => {
-  User.findAll()
-    .then((users) => res.json(users))
+app.get("/students", (req, res) => {
+  Student.findAll()
+    .then((students) => res.json(students))
     .catch((err) => console.error(err));
 });
 
-app.post("/users", (req, res) => {
-  User.create(req.body)
-    .then((user) => res.json(user))
+app.post("/students", (req, res) => {
+  Student.create(req.body)
+    .then((student) => res.json(student))
     .catch((err) => console.error(err));
 });
 ```
 
 </details>
 
-## Part 6: Running the App
+## Part 8: Running the App
 
 Our last step in this section is to tell your app to listen for requests. We'll want it to listen for requests on port 1337 and log the message "Server listening" upon connection.
 
@@ -129,8 +147,8 @@ app.listen(PORT, () => {
 
 </details>
 
-## Part 7: Testing the App
+## Part 9: Testing the App
 
-You can test your application using Postman or a similar tool. Send a GET request to `http://localhost:1337/users` to retrieve all users and a POST request to `http://localhost:1337/users` to create a new user. Make sure to include `username` and `email` in the body of your POST request.
+You can test your application using Postman or a similar tool. Send a GET request to `http://localhost:1337/students` to retrieve all students and a POST request to `http://localhost:1337/students` to create a new student. Make sure to include `name` and `email` in the body of your POST request.
 
-Congratulations, you have successfully integrated Sequelize into an Express app and created routes to retrieve and create users.
+Congratulations, you have successfully integrated Sequelize into an Express app and created routes to retrieve and create students.
