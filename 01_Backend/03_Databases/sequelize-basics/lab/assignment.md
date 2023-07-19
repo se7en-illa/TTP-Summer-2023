@@ -13,7 +13,7 @@ In this lab, we'll cover:
 
 ### Setup
 
-[Fork]() and clone this repo to your local machine -- cd into it and `npm install`.
+[Fork](https://github.com/se7en-illa/sequelize-basics) and clone this repo to your local machine -- cd into it and `npm install`.
 
 Take a look around the starting point:
 
