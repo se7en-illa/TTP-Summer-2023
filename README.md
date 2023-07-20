@@ -104,6 +104,8 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
   - In-Class Lab: [sequelize-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/sequelize-basics/lab/assignment.md)
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/WoK1BkA2IFmixUAE-hkj4Jt8GCm3y_YxuA_EZde3OqTbq-Rsq4lUw5af9oXNZ_sR.pOeMMMMwa9OF-8i4)
 - [ ] July 20th: Sequelize & Express Review
+  - In-Class Lab: [sequelize-express-review](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/review/lab/assignment.md)
+  - Project #4: [assignment](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/project-4/assignment.md)
 
 #### Phase 3: React & Redux
 
