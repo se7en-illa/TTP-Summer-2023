@@ -267,7 +267,7 @@ These routes use the Sequelize methods `findAll`, `findByPk`, `create`, `update`
 
 ### Testing
 
-Now that we have our routes set up, we can test them using a tool like Postman. Start your server by running `npm start` in your terminal, then use Postman to send requests to your routes.
+Now that we have our routes set up, we can test them using a tool like Insomnia. Start your server by running `npm start` in your terminal, then use Insomnia to send requests to your routes.
 
 - **GET /pokemon** should return a list of all Pokemon.
 - **GET /pokemon/:id** should return a single Pokemon with the given ID, or a 404 error if the Pokemon does not exist.
