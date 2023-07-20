@@ -11,7 +11,7 @@ Let's start a new node project from scratch and create an express app.
 - Step 3: Install express, sequelize, pg, pg-hstore, and dotenv by running in your terminal:
 
 ```zsh
-% npm install express sequelize pg pg-hstore dotenv
+% npm install express sequelize pg dotenv
 ```
 
 ## Part 2: Creating a PostgreSQL Database
@@ -80,6 +80,7 @@ Course.belongsToMany(Student, { through: "StudentCourses" });
 ```
 
 </details>
+Certainly, here's your revised lab utilizing async/await syntax:
 
 ## Part 6: Sync Models with Database
 
@@ -89,12 +90,14 @@ Course.belongsToMany(Student, { through: "StudentCourses" });
 <summary>Hint: Syncing models with the database</summary>
 
 ```javascript
-sequelize
-  .sync()
-  .then(() => {
+(async () => {
+  try {
+    await sequelize.sync();
     console.log("Models synced with database");
-  })
-  .catch((err) => console.error(err));
+  } catch (err) {
+    console.error(err);
+  }
+})();
 ```
 
 </details>
@@ -116,20 +119,28 @@ In these routes, use Sequelize to query the database.
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/students", (req, res) => {
-  Student.findAll()
-    .then((students) => res.json(students))
-    .catch((err) => console.error(err));
+app.get("/students", async (req, res) => {
+  try {
+    const students = await Student.findAll();
+    res.json(students);
+  } catch (err) {
+    console.error(err);
+  }
 });
 
-app.post("/students", (req, res) => {
-  Student.create(req.body)
-    .then((student) => res.json(student))
-    .catch((err) => console.error(err));
+app.post("/students", async (req, res) => {
+  try {
+    const student = await Student.create(req.body);
+    res.json(student);
+  } catch (err) {
+    console.error(err);
+  }
 });
 ```
 
 </details>
+
+Note: The try/catch blocks in the routes have been used to handle any possible errors that might occur during the execution of the async tasks. If any of these tasks were to throw an error (like a failed database operation), the catch block would handle it by logging the error and preventing it from crashing the app.
 
 ## Part 8: Running the App
 

@@ -84,7 +84,7 @@ Now that we have a database, we can start setting up Sequelize. Sequelize is a p
 First, we need to install Sequelize and the PostgreSQL driver for Node.js. Run the following command in your terminal:
 
 ```bash
-npm install sequelize pg pg-hstore
+npm install sequelize pg
 ```
 
 Next, we need to initialize Sequelize. Create a new file in your project directory named `db.js` and add the following code:
