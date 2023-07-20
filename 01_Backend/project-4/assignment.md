@@ -15,7 +15,7 @@ We will build:
 
 ### Setup
 
-Start off by forking and cloning [this repository](https://github.com/se7en-illa/pokedex-boilerplate-part2). You can also continue from your Pokedex Part 1 repository if you prefer.
+Start off by forking and cloning [this repository](https://github.com/se7en-illa/pokedex-boilerplate-v2). You can also continue from your Pokedex Part 1 repository if you prefer.
 
 ### Project Structure
 
