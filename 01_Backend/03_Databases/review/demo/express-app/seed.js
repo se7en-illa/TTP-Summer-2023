@@ -14,4 +14,11 @@ const { Tenant, Unit, Lease, Pet, User, db } = require("./db");
     phone: "1111111111",
     ssn: "98912389",
   });
+
+  await Unit.create({
+    aptNumber: "3C",
+    floor: 3,
+    bedrooms: 2,
+    area: 1000,
+  });
 })();
