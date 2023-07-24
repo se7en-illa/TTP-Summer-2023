@@ -14,9 +14,7 @@ A site that will let you vote on what to eat for dinner tonight!
 
 ### Webpack
 
-#### Improving with Modules
-
-##### Background
+##### Improving with Modules - Background
 
 Poke around the starting code. Right now, there's a couple voting buttons on the page, and some JS code set up that looks like it will help us get this voting system started.
 
