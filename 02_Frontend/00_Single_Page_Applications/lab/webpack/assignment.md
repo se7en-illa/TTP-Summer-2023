@@ -8,7 +8,7 @@ A site that will let you vote on what to eat for dinner tonight!
 
 ##### Setup
 
-1. Fork & clone [this repo]() to your computer.
+1. Fork & clone [this repo](https://github.com/se7en-illa/webpack-lab) to your computer.
 2. Navigate into the project and open it in VSCode.
 3. To run this app, open the public/index.html in your browser. Right now, it doesn't do anything. That's your job!
 
