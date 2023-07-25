@@ -27,8 +27,8 @@ First, let's check out the dependencies in the package.json:
 
 ```json
 "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+  "react": "^18.1.0",
+  "react-dom": "^18.1.0"
 },
 ```
 
@@ -44,13 +44,14 @@ If you are still concerned about your understanding of the way that `webpack` pe
 
 ```javascript
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 ```
 
 - Render an h1 tag into the DOM by adding the following code to index.js:
 
 ```javascript
-ReactDOM.render(<h1>Hello World</h1>, document.getElementById("app"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<h1>Hello World</h1>);
 ```
 
 That's JSX! It's a special syntax extension that React uses - we're only able to use it because our client-side JavaScript is compiled into the browser-safe `bundle.js` first (note that `webpack-dev-server` does this automatically for us). If you're still uncomfortable with JSX, read [this section of the React docs](https://react.dev/learn/writing-markup-with-jsx)
@@ -59,32 +60,31 @@ That's JSX! It's a special syntax extension that React uses - we're only able to
 
 #### Initial Render
 
-Now that we've said our hellos, let's write our first real component. A React component can be written in two ways: as a function, or a class. For now, we'll explore writing components using classes.
+Now that we've said our hellos, let's write our first real component. A React component can be written in two ways: as a function, or a class. For this course, let's explore writing components using functions.
 
-- In your `index.js`, write the following component. Be sure to add it before `ReactDOM.render`.
+- In your `index.js`, write the following component. Be sure to add it before `ReactDOM.createRoot`.
 
-All class components extend the `React.Component` class. Note that all of the JSX describing our view is being returned by a method on the class called `render`. This is a special method that all class components must have.
+All functional components should return a value. Note that all of the JSX describing our view is being returned by the Counter function.
 
 ```javascript
-class Counter extends React.Component {
-  render() {
-    return (
-      <div id="container">
-        <div id="navbar">Counter.js</div>
-        <div id="counter">
-          <h1>0</h1>
-          <button>Increment</button>
-        </div>
+function Counter {
+  return (
+    <div id="container">
+      <div id="navbar">Counter.js</div>
+      <div id="counter">
+        <h1>0</h1>
+        <button>Increment</button>
       </div>
-    );
-  }
+    </div>
+  );
 }
 ```
 
-- Render your `Counter` component to the DOM by swapping it in as the first argument to your `ReactDOM.render`. Note that we write the component as a self-closing JSX tag.
+- Render your `Counter` component to the DOM by swapping it in as the first argument to your `root.render`. Note that we write the component as a self-closing JSX tag.
 
 ```javascript
-ReactDOM.render(<Counter />, document.getElementById("app"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Counter />);
 ```
 
 - When the page refreshes your view should look similar to our goal.
@@ -97,56 +97,45 @@ Changes in the view of a React component are always described by state. This for
 
 The thing that changes in our UI is the number representing the count. We can represent this as a JavaScript number. Let's add state to our component, and some behavior that will cause that state to change.
 
-- Add a `constructor` to your `Counter` class and define state on the component like so. Note that `state` is always a JavaScript object. Individual pieces of state (like our count) are added as key-value pairs on that object.
+- Add a new line in your component that creates a new stateful variable named `count` and a function that updates this variable named `setCount`. The initial value of the `count` should be `0`;
 
 ```javascript
-constructor () {
-  super()
-  this.state = {
-    count: 0
-  }
-}
+const [count, setCount] = useState(0);
 ```
 
-Also note: we need to call `super()` because our `Counter` class is extending the `React.Component` class!
+<!-- Also note: we need to call `super()` because our `Counter` class is extending the `React.Component` class! -->
 
-Now let's write a new method on our component that it can use to update `this.state`. However, remember that `this.state` is immutable - we must never modify it directly! Instead, we must ask React (politely) to make the update for us using `this.setState`.
+Now let's write a new method on our component that it can use to update `count`. However, remember that we must never modify `count` directly! Instead, we must ask React (politely) to make the update for us using `setCount`.
 
 - Add a new method to the `Counter` class, called "increment". It should look like this:
 
 ```javascript
 increment () {
-  this.setState({
-    count: this.state.count + 1
-  })
+  setCount(count + 1)
 }
 ```
 
-If you thought to write something like `this.state.count++`, that won't work! Take a moment to think about why.
+If you thought to write something like `count++`, that won't work! Take a moment to think about why.
 
 Now we're ready to include the value on our state when we render, and attach the "increment" function to the button's click listener. In JSX, we use a single pair of curly braces to evaluate a JavaScript expression.
 
-Render `this.state.count` into the place where the count should go, and attach "increment" as the callback to the button's `onClick` event like so:
+Render `count` into the place where the count should go, and attach "increment" as the callback to the button's `onClick` event like so:
 
 ```javascript
-render () {
-  return (
-    <div id='container'>
-      <div id='navbar'>
-        Counter.js
-      </div>
-      <div id='counter'>
-        <h1>{this.state.count}</h1>
-        <button onClick={this.increment}>Increment</button>
-      </div>
+return (
+  <div id="container">
+    <div id="navbar">Counter.js</div>
+    <div id="counter">
+      <h1>{count}</h1>
+      <button onClick={increment}>Increment</button>
     </div>
-  )
-}
+  </div>
+);
 ```
 
 - Once the page refreshes, try clicking the button to increment the counter.
 
-...It didn't work!?! Yup, sorry. We've encountered a common stumbling block with React. Let's take a moment to understand what's wrong.
+<!-- ...It didn't work!?! Yup, sorry. We've encountered a common stumbling block with React. Let's take a moment to understand what's wrong.
 
 - Open your Dev Tools. What error did you receive? Based on the error, what seems to be the problem?
 
@@ -171,9 +160,9 @@ constructor () {
 }
 ```
 
-Once the page refreshes, try clicking the button again.
+Once the page refreshes, try clicking the button again. -->
 
-Now it works! You can count!
+It works! You can count!
 
 ### Review 1: Prompt
 
@@ -185,9 +174,9 @@ Write down, in as much detail as possible, what happens when the "increment" but
 A possible description of the data flow would be as follows:
 
 - The `onClick` listener invokes our bound "increment" function
-  = Our "increment" function asks the `Counter` component to update its state by invoking `this.setState`
-- The `Counter` component generates a new state object by merging the requested change into the previous state, and reassigns `this.state` to be that new state object
-- The `Counter` component executes its "render" method with the new state
+  = Our "increment" function asks the `Counter` component to update its state by invoking `setCount`
+- The `Counter` component generates a new state value by reassigning `count` to be that new state value
+- The `Counter` component returns from its function with the new html including its `count` state updated
 
 When we update the state on a component, that component re-renders. This is the fundamental way that data flows in React!
 
@@ -195,34 +184,24 @@ When we update the state on a component, that component re-renders. This is the 
 
 ### Review 2: The First Law
 
-Notice how in the previous example, we initialized state in the constructor to be `this.state = { count: 0 }`? It was actually pretty important that we gave our state some default value. Why wouldn't we want to to initialize the state to be something like `this.state = { count: null }` or `this.state = {}`?
+Notice how in the previous example, we initialized the `count` state to be `0`? It was actually pretty important that we gave our state some default value. Why wouldn't we want to to initialize the state to be something like `null` or `{}`?
 
-Consider the difference between the following constructors:
+Consider the difference between the following code:
 
 ```javascript
-constructor () {
-  super()
-  this.state = {
-    favoritePuppy: {},
-    allPuppies: [],
-    numberOfDogTreatsRemaining: 0,
-    ownerName: ''
-  }
-}
+const [favoritePuppy, setFavoritePuppy] = useState({});
+const [allPuppies, setAllPuppies] = useState([]);
+const [dogTreatsRemaining, setdogTreatsRemaining] = useState(0);
+const [ownerName, setOwnerName] = useState("");
 ```
 
 vs.
 
 ```javascript
-constructor () {
-  super()
-  this.state = {
-    favoritePuppy: null,
-    allPuppies: null,
-    numberOfDogTreatsRemaining: null,
-    ownerName: null
-  }
-}
+const [favoritePuppy, setFavoritePuppy] = useState(null);
+const [allPuppies, setAllPuppies] = useState(null);
+const [dogTreatsRemaining, setdogTreatsRemaining] = useState(null);
+const [ownerName, setOwnerName] = useState(null);
 ```
 
 Which code would you rather maintain? By initializing your state object with default values, you self-document the types of data being held on state. That's pretty useful!
@@ -230,21 +209,18 @@ Which code would you rather maintain? By initializing your state object with def
 What's more, when we initialize our types properly, we implicitly guard against TypeErrors. Consider the following:
 
 ```javascript
-constructor () {
-  super()
-  this.state = { kittens: [] } // no kittens yet
-}
+const [kittens, setKittens] = useState([]); // no kittens yet
 
-render () {
-  return (
-    <div>
-      { this.state.kittens.map(kitten => <div>{kitten.name}</div>) }
-    </div>
-  );
-}
+return (
+  <div>
+    {kittens.map((kitten) => (
+      <div>{kitten.name}</div>
+    ))}
+  </div>
+);
 ```
 
-In this example, we don't have any kittens (perhaps we're going to get them from our server later). However, our render method can safely and declaratively use `Array.prototype.map` without fear of a TypeError (this wouldn't be the case if `this.state.kittens` was initialized to null or undefined!)
+In this example, we don't have any kittens (perhaps we're going to get them from our server later). However, our render method can safely and declaratively use `Array.prototype.map` without fear of a TypeError (this wouldn't be the case if `kittens` was initialized to `null` or `undefined`!)
 
 THE FIRST LAW: STATE MUST ALWAYS BE INITIALIZED WITH THE APPROPRIATE DATA TYPE
 Never break The First Law - always initialize your state appropriately!
