@@ -1,0 +1,29 @@
+header,
+main,
+footer,
+article,
+aside {
+  padding: 1rem;
+}
+
+header {
+  background-color: coral;
+}
+
+main {
+  display: flex;
+  height: 200px;
+  background-color: beige;
+}
+
+article {
+  background-color: bisque;
+}
+
+aside {
+  background-color: aqua;
+}
+
+footer {
+  background-color: aliceblue;
+}
