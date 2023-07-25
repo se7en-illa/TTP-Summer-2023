@@ -50,7 +50,7 @@ import ReactDOM from "react-dom/client";
 - Render an h1 tag into the DOM by adding the following code to index.js:
 
 ```javascript
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(<h1>Hello World</h1>);
 ```
 
@@ -83,7 +83,7 @@ function Counter {
 - Render your `Counter` component to the DOM by swapping it in as the first argument to your `root.render`. Note that we write the component as a self-closing JSX tag.
 
 ```javascript
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(<Counter />);
 ```
 
@@ -134,33 +134,6 @@ return (
 ```
 
 - Once the page refreshes, try clicking the button to increment the counter.
-
-<!-- ...It didn't work!?! Yup, sorry. We've encountered a common stumbling block with React. Let's take a moment to understand what's wrong.
-
-- Open your Dev Tools. What error did you receive? Based on the error, what seems to be the problem?
-
-<details>
-<summary>Hint: The Problem</summary>
-
-The problem is `this` context! In our "increment" method, we use `this.setState`. However, when the "increment" function is invoked by the `onClick` listener, it will be invoked without its proper `this` context.
-
-We can fix this by `binding` the context of "increment". We could do this in the call to render, but because the "render" method will be called every time the state updates, this means we'll end up creating a lot of function objects over time (they'll be garbage collected eventually, but it's still not ideal). A better strategy is to `bind` the method on the constructor of the component. This way, we only ever create one bound version of the method.
-
-</details>
-
-- Bind the `this` context of "increment" to be the context of the component in the constructor, like so:
-
-```javascript
-constructor () {
-  super()
-  this.state = {
-    count: 0
-  }
-  this.increment = this.increment.bind(this)
-}
-```
-
-Once the page refreshes, try clicking the button again. -->
 
 It works! You can count!
 
