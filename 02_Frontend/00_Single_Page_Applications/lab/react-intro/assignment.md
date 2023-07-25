@@ -6,7 +6,7 @@ React is a tool for building interfaces. Throughout the next couple of weeks, we
 
 Follow these instructions to get started:
 
-1. Clone [this repo]() to your computer.
+1. Clone [this repo](https://github.com/se7en-illa/react-intro) to your computer.
 2. Navigate into the project and open it in VSCode.
 3. Use the command `npm install` in your terminal to install all of the node modules.
 4. Take a moment to review the starting point.
@@ -15,7 +15,7 @@ Follow these instructions to get started:
 
 Our goal is to build a simple app that counts up from 0 when you click a button. It will look something like this:
 
-<img></img>
+<img src="./counterjs.png">
 
 The subsequent steps will guide you towards this goal.
 
