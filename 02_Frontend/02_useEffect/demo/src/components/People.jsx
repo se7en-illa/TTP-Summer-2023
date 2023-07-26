@@ -1,28 +1,31 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import Person from "./Person";
 
-export default function People(){
-    
-    const [people, setPeople] = useState([]);
+export default function People() {
+  // here we destructure our array of size 2
+  const [people, setPeople] = useState([]);
+  const [ids, setIds] = useState([0, 1, 2]);
 
-    useEffect(() => 
+  useEffect(() => {
     async function fetchPeople() {
-        const response = await fetch(
-            "https://mocki.io/v1/19fe7cc0-9684-48d4-9df2-8c1d4aaeacb9"
-        );
+      const response = await fetch(
+        "https://mocki.io/v1/93b89f1d-c95b-4b00-947d-b692e7528a3f"
+      );
 
-        const people = await response.json();
-        setPeople(people);
+      const people = await response.json();
+      setPeople(people);
+    }
 
-        fetchPeople();
-    });
+    fetchPeople();
+  });
 
-    return (
-        <ul>
-            {
-                {title.map(({ id, age, name}) = (
-                    <Person id={id} age={age} name={name}></Person>
-                ))}
-            }
-        </ul>
-    )
+  return (
+    <ul>
+      {/* // here we destructure our array object by picking its keys */}
+      {/* {ids.map((id) => (
+        <Person index={id} />
+      ))} */}
+      <Person index={2} />
+    </ul>
+  );
 }

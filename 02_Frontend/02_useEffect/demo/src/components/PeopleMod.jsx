@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 645ee97 (Modified 02_02 demo files)
 import { useState, useEffect } from "react";
 import Person from "./Person";
 
