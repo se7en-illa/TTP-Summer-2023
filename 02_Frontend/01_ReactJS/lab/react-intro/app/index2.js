@@ -1,18 +1,21 @@
 // Your code here!
-import React from "react";
+
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
-import { useState } from "react";
+
 function Counter() {
-    const [count, setCount] = useState(0);
+    
+    const [kittens, setKittens] = useState([]);
+
     return (
-      <div id="container">
-        <div id="navbar">Counter.js</div>
-        <div id="counter">
-          <h1>0</h1>
-          <button>Increment</button>
+        <div>
+          {kittens.map((kitten) => (
+            <div>{kitten.name}</div>
+          ))}
         </div>
-      </div>
     );
 }
-  const root = ReactDOM.createRoot(document.getElementById("app"));
-  root.render(<Counter />);
+
+const root = ReactDOM.createRoot(document.getElementById("app"));
+// root.render(<h1>Hello World!</h1>);
+root.render(<Counter />);
