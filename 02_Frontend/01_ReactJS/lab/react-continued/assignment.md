@@ -14,15 +14,13 @@ To successfully complete this lab, you should be familiar with JavaScript, and b
 
 ### Steps:
 
-1. Install Node.js and npm: If you haven't installed them already, you can download them [here](https://nodejs.org/).
+1. Create a New React Application: Run `npx create-react-app react-starwars`. This command creates a new React application in a directory called `react-starwars`.
 
-2. Create a New React Application: Run `npx create-react-app react-starwars`. This command creates a new React application in a directory called `react-starwars`.
+2. Move into the New Directory: Change your directory to your new app by running `cd react-starwars`.
 
-3. Move into the New Directory: Change your directory to your new app by running `cd react-starwars`.
+3. Install Libraries: Install axios and express by running `npm install axios express`.
 
-4. Install Libraries: Install axios and express by running `npm install axios express`.
-
-Now, open the project in your favorite code editor.
+Now, open the project in VSCode.
 
 ## Task
 
