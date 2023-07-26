@@ -1,6 +1,10 @@
 {
   "name": "lab-react-intro",
   "version": "1.0.0",
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "react-app"
+  },
   "main": "index.js",
   "author": "",
   "description": "",
