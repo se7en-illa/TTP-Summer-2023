@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 
 export default function Person({ index }) {
@@ -25,3 +26,15 @@ export default function Person({ index }) {
     </li>
   );
 }
+=======
+export default function Person(props) {
+    const { id, name, age } = props;
+
+    return (
+        <li key={id}>
+            {name} is {age} years old.
+        </li>
+    )
+    
+}
+>>>>>>> 7b7b394 (Started tracking new folder)
