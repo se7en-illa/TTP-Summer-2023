@@ -152,36 +152,65 @@ export default StarWarsCharacters;
 
 </details>
 
-### Part 3. Fetching Data with Axios
+### Part 3. Understanding Axios and Fetching Data with Async/Await
 
-In web development, you often need to fetch data from an API and display it on your page. Axios is a popular JavaScript library for making HTTP requests. It works in both the browser and Node.js, supports the Promise API, and provides a wide range of features.
+In web development, you often need to fetch data from an API and display it on your page. Axios is a popular JavaScript library for making HTTP requests. It works in both the browser and Node.js, supports the Promise API, and provides a wide range of features.Axios has methods for HTTP requests such as `get`, `post`, `put`, `delete`, etc.
 
-Axios has methods for HTTP requests such as `get`, `post`, `put`, `delete`, etc. In this lab, we're using the `get` method to fetch data from our API:
+The async/await syntax in JavaScript is a more modern and succinct way to handle asynchronous operations. It makes asynchronous code look and behave a little more like synchronous code, thus making it easier to understand and write.
+
+In this lab, we're using the `get` method to fetch data from our API. Here's a basic example of how you can use `axios.get` with async/await to send a GET request:
 
 ```javascript
-axios
-  .get("http://localhost:3001/api/people")
-  .then((response) => {
-    setCharacters(response.data.results);
-  })
-  .catch((error) => {
+async function fetchData() {
+  try {
+    const response = await axios.get("https://api.example.com/data");
+    console.log(response.data);
+  } catch (error) {
     console.error("Error fetching data", error);
-  });
+  }
+}
+fetchData();
 ```
 
-Here's what's happening in this code:
+Let's break this down:
 
-- `axios.get('http://localhost:3001/api/people')`: This line sends a GET request to the API endpoint at 'http://localhost:3001/api/people'. The `get` method returns a promise that resolves to the response from the API.
+1. **async function:** An async function is a function declared with the `async` keyword. Async functions are instances of the AsyncFunction constructor, and the `await` keyword can only be used within an async function.
 
-- `.then(response => {...})`: This is the `.then` method of the promise returned by `axios.get`. It is called when the promise is resolved, i.e., when we get the response from the API. The `response` object contains all the information about the response, including the status, headers, and data. In the callback function, we call `setCharacters` to update our `characters` state with the fetched data.
+2. **await axios.get:** The `await` keyword causes the JavaScript runtime to pause and wait for the promise to resolve or reject, and then to resume execution and return the resolved value.
 
-- `setCharacters(response.data.results)`: This line updates our `characters` state with the fetched data. `response.data` is the actual data returned by the API. In this case, it's an object that has a `results` property containing the list of characters.
+3. **try/catch:** The try/catch statement marks a block of code to try, and specifies a response should an exception be thrown.
 
-- `.catch(error => {...})`: This is the `.catch` method of the promise. It is called if an error occurs while sending the request or receiving the response. The `error` object contains information about the error. Here, we're logging the error to the console.
+Now, let's implement Axios with async/await in our `useEffect` to fetch data from our Star Wars API.
 
-The `axios.get` request is asynchronous, which means it doesn't block the rest of your code from executing while it's waiting for the API response. This is why we use the `.then` and `.catch` methods to handle the response and error respectively: they are called when the asynchronous operation completes.
+##### Implementing Axios
 
-Using Axios, you can also set headers, transform the request and response data, cancel requests, and even create an instance of Axios with custom defaults. It's a powerful library that simplifies the process of working with APIs in JavaScript.
+Inside your `useEffect` in your `StarWarsCharacters` component, implement an `async` function called `fetchCharacters` that uses a try/catch block to request data using [Axios](https://axios-http.com/docs/api_intro) from the [Star Wars API](https://swapi.dev/documentation).
+
+```javascript
+useEffect(() => {
+  const fetchCharacters = async () => {
+    try {
+      const response = await axios.get("https://swapi.dev/api/people/");
+      console.log(response.data.results);
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  };
+
+  fetchCharacters();
+}, []);
+```
+
+In this code:
+
+1. We define an asynchronous function `fetchCharacters` inside `useEffect` that fetches data from the Star Wars API.
+2. We send a GET request to the Star Wars API using `axios.get`. The URL we're passing is the endpoint that contains the data for Star Wars characters.
+3. If the GET request is successful, the requested data is logged to the console (`console.log(response.data.results)`).
+4. If an error occurs during the request (like network issues, server down, etc.), it's caught in the catch block and logged to the console (`console.error("Error fetching data", error)`).
+
+This way, you're setting up a pattern to fetch data from an API, handle the response, and catch any errors that might occur during the request. It's a good practice to always handle the potential error case when dealing with promises to prevent any uncaught promise rejection warnings.
+
+Next, we'll look at how to display the fetched data in our React component.
 
 ### Part 4. Implementing State with useState
 
@@ -192,31 +221,53 @@ React components have a built-in state object. The state object is where you sto
 For functional components, we use the `useState` Hook to manage the state. The `useState` Hook is a function that takes one argument, the initial state, and returns an array of two elements: the current state and a function to update it. It's a convention to use array destructuring to assign names to these elements.
 
 ```javascript
+const [data, setData] = useState([]);
+```
+
+In this line of code, `useState([])` initializes `data` state as an empty array. The function `useState` returns an array where the first element is the current state, and the second element is a function to update that state. Using array destructuring, we assign the current state to `data` and the function to update the state to `setData`.
+
+Any time you want to change `data`, you must use `setData`. This is because state in React is **immutable**. You can't change it directly. If you want to change state, you need to use the updating function (`setData` in this case).
+
+##### Adjusting our component with useState
+
+1. In your `StarWarsCharacters` component, initialize a state variable to hold our character data.
+
+<details>
+<summary>Hint: State variable</summary>
+
+```javascript
 const [characters, setCharacters] = useState([]);
 ```
 
-In this line of code, `useState([])` initializes `characters` state as an empty array. The function `useState` returns an array where the first element is the current state, and the second element is a function to update that state. Using array destructuring, we assign the current state to `characters` and the function to update the state to `setCharacters`.
+</details>
 
-Any time you want to change `characters`, you must use `setCharacters`. This is because state in React is **immutable**. You can't change it directly. If you want to change state, you need to use the updating function (`setCharacters` in this case).
+2. Adjust your fetchCharacters function to update the state once the data had been fetched.
 
-For example, when we fetch the Star Wars characters from the API, we can store them in `characters` state:
+<details>
+<summary>Hint: Completed useEffect</summary>
 
 ```javascript
-axios
-  .get("http://localhost:3001/api/people")
-  .then((response) => {
-    setCharacters(response.data.results);
-  })
-  .catch((error) => {
-    console.error("Error fetching data", error);
-  });
+useEffect(() => {
+  const fetchCharacters = async () => {
+    try {
+      const response = await axios.get("https://swapi.dev/api/people/");
+      setCharacters(response.data.results);
+    } catch (error) {
+      console.error("Error fetching data", error);
+    }
+  };
+
+  fetchCharacters();
+}, []);
 ```
 
-Here, we're using `setCharacters` to update our `characters` state with the data we receive from our API.
+</details>
 
-When we update the state by calling `setCharacters`, React automatically triggers a re-render of the component, so the new data is displayed on the page.
+This code is placed inside a `useEffect` to run once the component mounts. When the response is received, the `response.data.results` (which contains the array of Star Wars characters) is stored into `characters` state using the `setCharacters` function. If an error occurs during the request, it's caught and logged to the console.
 
-Remember, it's crucial to always use the updating function returned by `useState` when you want to change state. Directly changing the state variable will not trigger a re-render of the component, so your users won't see the updated data.
+When the state updates by calling `setCharacters`, React automatically triggers a re-render of the component, displaying the new data. This is one of the main advantages of using state in React - your UI is always in sync with your data.
+
+Always remember, it's crucial to use the update function returned by `useState` (in this case `setCharacters`) when you want to change state. Directly mutating the state variable does not trigger a re-render, and therefore, the changes will not be reflected on your UI.
 
 ### Part 5. Displaying the Characters
 
@@ -250,33 +301,6 @@ Be sure to always check that the data you want to display exists before trying t
 
 Remember that React requires a unique `key` prop for each child in a list, and here we are using the character's `name` for that purpose. This helps React identify which items have changed, are added, or are removed, and contributes to the efficiency of rendering.
 
-### Part 6. Creating an Express Server to Fetch and Send Data
-
-Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. You'll create an Express server that fetches data from the Star Wars API and sends it to the front end.
-
-The following code creates a server that listens on port 3001. It has a single endpoint that responds to GET requests at `/api/people` by making a request to the Star Wars API, fetching the data, and sending it as the response.
-
-```javascript
-const express = require("express");
-const axios = require("axios");
-const app = express();
-const port = 3001;
-
-app.get("/api/people", async (req, res) => {
-  try {
-    const response = await axios.get("https://swapi.dev/api/people/");
-    res.send(response.data);
-  } catch (error) {
-    console.error("Error fetching data", error);
-    res.status(500).send("Error fetching data from Star Wars API");
-  }
-});
-
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
-});
-```
-
 ### Part 7. Review
 
 **Functional Components:** Functional components have a simple structure and are easy to understand. They don't have their lifecycle methods or state, which can simplify your components, and with Hooks, they are just as powerful as class components.
@@ -284,8 +308,6 @@ app.listen(port, () => {
 **React Hooks:** Hooks allow you to use state and other React features in functional components. `useEffect` and `useState` are the basic Hooks that allow you to use React features in a more direct way.
 
 **Axios:** Axios is a popular JavaScript library used to make HTTP requests. It supports the Promise API and is more feature-rich compared to the fetch API built into modern browsers. It makes it easy to send asynchronous HTTP requests and handle responses.
-
-**Express Server:** An Express server is a simple way to create a server-side component of your application. It's easy to create routes and handle requests and responses.
 
 **Rendering Lists in React:** To render multiple components in React, you can use JavaScript's array `map()` function in JSX. Remember to include a unique `key` prop for each child in the list.
 
