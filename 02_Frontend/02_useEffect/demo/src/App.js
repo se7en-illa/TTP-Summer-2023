@@ -1,36 +1,55 @@
-import Pokemon from "./components/Pokemon";
-import SinglePokemon from "./components/SinglePokemon";
-import { useState } from "react";
-import "./App.css";
 
-function App() {
-  const [showAll, setShowAll] = useState(true);
-  const [currentPokemonName, setCurrentPokemonName] = useState("");
+// import People from "./components/People";
+// import "./App.css";
 
-  function handleClick(event) {
-    event.preventDefault();
+// function App() {
+//   const [showAll, setShowAll] = useState(true);
+//   const [currentPokemonName, setCurrentPokemonName] = useState("");
 
-    setCurrentPokemonName(event.target.innerText);
-    setShowAll(false);
-  }
+//   function handleClick(event) {
+//     event.preventDefault();
 
-  return (
-    <>
-      <h1>App</h1>
-      {showAll ? (
-        <Pokemon handleClick={handleClick} />
-      ) : (
-        <SinglePokemon
-          name={currentPokemonName}
-          setCurrentPokemonName={setCurrentPokemonName}
-          setShowAll={setShowAll}
-        />
-      )}
-    </>
-)
-  }
+//     setCurrentPokemonName(event.target.innerText);
+//     setShowAll(false);
+//   }
 
+//   return {
+//     (
+//     <div>
+//       <h1>App</h1>
+//       ){showAll ? (
+//         <Pokemon handleClick={handleClick} />
+//       ) : (
+//         <SinglePokemon
+//           name={currentPokemonName}
+//           setCurrentPokemonName={setCurrentPokemonName}
+//           setShowAll={setShowAll}
+//         />
+//       )}
+//   }
+      
+    // </>
 // import logo from './logo.svg';
+// import './App.css';
+
+// function App() {
+//   return (
+//     <>
+//       <h1>App</h1>
+//       {showAll ? (
+//         <Pokemon handleClick={handleClick} />
+//       ) : (
+//         <SinglePokemon
+//           name={currentPokemonName}
+//           setCurrentPokemonName={setCurrentPokemonName}
+//           setShowAll={setShowAll}
+//         />
+//       )}
+//     </>
+// )
+//   }
+
+// impo rt logo from './logo.svg';
 // import './App.css';
 
 // function App() {
@@ -54,4 +73,4 @@ function App() {
 //   );
 // }
 
-export default App;
+// export default App;
