@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import People from "./components/People";
 import "./App.css";
 
@@ -9,6 +10,8 @@ function App() {
       <People />
     </>
 =======
+=======
+>>>>>>> 7b7b394 (Started tracking new folder)
 import logo from './logo.svg';
 import './App.css';
 
@@ -30,6 +33,9 @@ function App() {
         </a>
       </header>
     </div>
+<<<<<<< HEAD
+>>>>>>> 7b7b394 (Started tracking new folder)
+=======
 >>>>>>> 7b7b394 (Started tracking new folder)
   );
 }
