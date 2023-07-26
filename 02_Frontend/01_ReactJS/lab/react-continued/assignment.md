@@ -26,11 +26,54 @@ Now, open the project in your favorite code editor.
 
 ## Task
 
-### 1. Understanding and Implementing Functional Components
+### Part 1. Understanding and Implementing Functional Components
 
-**Functional components** are a way of defining components as JavaScript functions. These components can accept props as arguments and return a React element, which can be a description of UI. Using functional components simplifies the writing of components and omits the need for managing the component's lifecycle and state.
+**Functional components** are a way of defining components as JavaScript functions. Using functional components simplifies the writing of components and omits the need for managing the component's lifecycle and state.
 
-Inside the `src` directory, create a new file `StarWarsCharacters.js`. This component will be responsible for fetching and displaying the Star Wars characters.
+A functional component is just a JavaScript function that returns React elements. It accepts props as an argument and returns a React element. Here's an example:
+
+```javascript
+function StarWarsCharacter({ character }) {
+  return (
+    <div>
+      <h2>{character.name}</h2>
+      {/* other character details */}
+    </div>
+  );
+}
+```
+
+In this example, `StarWarsCharacter` is a functional component that accepts a `props` object and returns a React element. This component renders a `div` with a `h2` title.
+
+Functional components have several key features:
+
+1. **Simplicity:** Functional components are just JavaScript functions. You don't need to worry about `this` keyword or lifecycle methods. It’s much easier to read and understand.
+
+2. **Hooks:** Functional components can use Hooks, which are a new addition in React 16.8. They let you use state and other React features without writing a class. This allows you to write a fully featured component with less code and complexity.
+
+3. **Performance:** In most cases, functional components are slightly faster and use less memory than class components because they don't have instances. However, this advantage is minimal and might not be noticeable in most applications.
+
+4. **Testing and Debugging:** Functional components are easier to test and debug because they are plain JavaScript functions. They are also easier to understand at a quick glance because they are more declarative.
+
+##### Setting Up a Functional Component
+
+1. Inside the `src` directory of your project, create a new file `StarWarsCharacters.js`. This component will be responsible for fetching and displaying the Star Wars characters.
+2. Import React into your `StarWarsCharacters.js` file.
+
+<details>
+<summary>Hint: Importing React</summary>
+
+```javascript
+import React from "react";
+```
+
+</details>
+
+3. Once you import React, create your functional component called "StarWarsCharacters" and return an h1 tag inside of a div tag with the text content "Characters". This will be a temporary placeholder until we display our information later in this lab.
+4. Export your component at the end of the file.
+
+<details>
+<summary>Hint: Completed Component</summary>
 
 ```javascript
 import React from "react";
@@ -46,9 +89,15 @@ function StarWarsCharacters() {
 export default StarWarsCharacters;
 ```
 
-### 2. Understanding and Implementing useEffect
+</details>
 
-The `useEffect` Hook allows you to perform side effects in function components. In simple terms, **side effects** are anything that affects something outside the scope of the function being executed. In this case, it's making an API request to fetch data from a server. We use the `useEffect` Hook within the component to run the code after the component renders.
+### 2. Implementing useEffect
+
+React's `useEffect` Hook allows you to perform side effects in function components. In simple terms, **side effects** are operations that affect something outside the scope of the function being executed. These could include working with API requests, timers, manually changing the DOM, and more. `useEffect` is used to deal with side effects that occur from rendering and data changes.
+
+In our current scenario, we will use it for logging a message to the console when the component is mounted, but it could also be used to fetch data from a server, listen to events, or perform some other "side effect" that you don't want to run every time the component renders.
+
+Here's a code example:
 
 ```javascript
 import React, { useEffect } from "react";
@@ -66,38 +115,116 @@ function StarWarsCharacters() {
 }
 ```
 
-### 3. Understanding Axios and Fetching Data
+Let's break it down:
 
-Axios is a promise-based HTTP client for the browser and Node.js. Axios makes it easy to send asynchronous HTTP requests. It has a more powerful and flexible feature set and is more popular among developers compared to the fetch API built into modern browsers due to its versatility and ease of use.
+1. **Importing `useEffect`:** First, we import the `useEffect` Hook from the React library. Hooks are functions that let you “hook into” React state and lifecycle features from function components.
 
-In your `useEffect` callback, make a GET request to your Express server to fetch the Star Wars characters:
+2. **Using `useEffect`:** In our functional component, `StarWarsCharacters`, we call `useEffect`. This Hook takes in two arguments: a function and an array. The function contains the side effect you want to run.
+
+3. **The Effect function:** We're passing a function to `useEffect` that runs our side effect. In this case, it's logging a message to the console.
+
+4. **Dependency Array:** The second argument to `useEffect` is an array of dependencies. The effect will only rerun if the dependencies have changed since the last render. By passing an empty array (`[]`), we're telling React that our effect doesn't depend on any values from the component, so it only runs once after the initial render. This mirrors the `componentDidMount` lifecycle method from class components.
+
+The `useEffect` Hook is a powerful tool that gives functional components the same capabilities that were previously only possible with class components. It replaces several lifecycle methods (`componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`) and allows you to organize your side effects in a more intuitive way.
+
+##### Adding useEffect
+
+In your `StarWarsCharacters.js file`, import useEffect and initialize a useEffect hook with a `console.log("We will fetch our data here!")` inside of it.
+
+<details>
+<summary>Hint: StarWarsCharacters.js so far...</summary>
 
 ```javascript
-useEffect(() => {
-  axios
-    .get("http://localhost:3001/api/people")
-    .then((response) => {
-      console.log(response.data);
-    })
-    .catch((error) => {
-      console.error("Error fetching data", error);
-    });
-}, []);
+import React, { useEffect } from "react";
+
+function StarWarsCharacters() {
+  useEffect(() => {
+    console.log("We will fetch our data here!");
+  }, []);
+
+  return (
+    <div>
+      <h1>Star Wars Characters</h1>
+    </div>
+  );
+}
+
+export default StarWarsCharacters;
 ```
 
-### 4. Understanding and Implementing State with useState
+</details>
 
-The `useState` Hook is a built-in Hook in React that allows you to add React state to your functional components. This state is preserved between re-renders, and you can change its value to trigger a re-render of your component.
+### Part 3. Fetching Data with Axios
+
+In web development, you often need to fetch data from an API and display it on your page. Axios is a popular JavaScript library for making HTTP requests. It works in both the browser and Node.js, supports the Promise API, and provides a wide range of features.
+
+Axios has methods for HTTP requests such as `get`, `post`, `put`, `delete`, etc. In this lab, we're using the `get` method to fetch data from our API:
+
+```javascript
+axios
+  .get("http://localhost:3001/api/people")
+  .then((response) => {
+    setCharacters(response.data.results);
+  })
+  .catch((error) => {
+    console.error("Error fetching data", error);
+  });
+```
+
+Here's what's happening in this code:
+
+- `axios.get('http://localhost:3001/api/people')`: This line sends a GET request to the API endpoint at 'http://localhost:3001/api/people'. The `get` method returns a promise that resolves to the response from the API.
+
+- `.then(response => {...})`: This is the `.then` method of the promise returned by `axios.get`. It is called when the promise is resolved, i.e., when we get the response from the API. The `response` object contains all the information about the response, including the status, headers, and data. In the callback function, we call `setCharacters` to update our `characters` state with the fetched data.
+
+- `setCharacters(response.data.results)`: This line updates our `characters` state with the fetched data. `response.data` is the actual data returned by the API. In this case, it's an object that has a `results` property containing the list of characters.
+
+- `.catch(error => {...})`: This is the `.catch` method of the promise. It is called if an error occurs while sending the request or receiving the response. The `error` object contains information about the error. Here, we're logging the error to the console.
+
+The `axios.get` request is asynchronous, which means it doesn't block the rest of your code from executing while it's waiting for the API response. This is why we use the `.then` and `.catch` methods to handle the response and error respectively: they are called when the asynchronous operation completes.
+
+Using Axios, you can also set headers, transform the request and response data, cancel requests, and even create an instance of Axios with custom defaults. It's a powerful library that simplifies the process of working with APIs in JavaScript.
+
+### Part 4. Implementing State with useState
+
+State is a built-in feature of React components that allows them to remember and manipulate data without requiring a refresh of the page. It's similar to instance variables for a class in object-oriented programming.
+
+React components have a built-in state object. The state object is where you store property values that belong to the component. When the state object changes, the component re-renders.
+
+For functional components, we use the `useState` Hook to manage the state. The `useState` Hook is a function that takes one argument, the initial state, and returns an array of two elements: the current state and a function to update it. It's a convention to use array destructuring to assign names to these elements.
 
 ```javascript
 const [characters, setCharacters] = useState([]);
 ```
 
-Here, `characters` is the state variable that will store the list of characters we receive from the API, and `setCharacters` is the function that we'll use to update that state.
+In this line of code, `useState([])` initializes `characters` state as an empty array. The function `useState` returns an array where the first element is the current state, and the second element is a function to update that state. Using array destructuring, we assign the current state to `characters` and the function to update the state to `setCharacters`.
 
-### 5. Displaying the Characters
+Any time you want to change `characters`, you must use `setCharacters`. This is because state in React is **immutable**. You can't change it directly. If you want to change state, you need to use the updating function (`setCharacters` in this case).
 
-After fetching the characters and storing them in the state, the final step is to display the characters on the page. Here we map over the `characters` array and render a list item for each character.
+For example, when we fetch the Star Wars characters from the API, we can store them in `characters` state:
+
+```javascript
+axios
+  .get("http://localhost:3001/api/people")
+  .then((response) => {
+    setCharacters(response.data.results);
+  })
+  .catch((error) => {
+    console.error("Error fetching data", error);
+  });
+```
+
+Here, we're using `setCharacters` to update our `characters` state with the data we receive from our API.
+
+When we update the state by calling `setCharacters`, React automatically triggers a re-render of the component, so the new data is displayed on the page.
+
+Remember, it's crucial to always use the updating function returned by `useState` when you want to change state. Directly changing the state variable will not trigger a re-render of the component, so your users won't see the updated data.
+
+### Part 5. Displaying the Characters
+
+After fetching the characters and storing them in the state, the final step is to display the characters on the page. Here, we map over the `characters` array and render a list item for each character.
+
+We will display not only their names but also their `gender`, `homeworld`, `height`, `species`, and `birth_year`. Remember that this information is stored in the properties of each character object in the `characters` array.
 
 ```javascript
 return (
@@ -105,14 +232,27 @@ return (
     <h1>Star Wars Characters</h1>
     <ul>
       {characters.map((character) => (
-        <li key={character.name}>{character.name}</li>
+        <li key={character.name}>
+          <h2>{character.name}</h2>
+          <p>Gender: {character.gender}</p>
+          <p>Birth Year: {character.birth_year}</p>
+          <p>Height: {character.height}</p>
+          <p>Homeworld: {character.homeworld}</p>
+          <p>Species: {character.species[0]}</p>
+        </li>
       ))}
     </ul>
   </div>
 );
 ```
 
-### 6. Creating an Express Server to Fetch and Send Data
+In this JSX code, for each `character` in the `characters` array, we create a list item that displays the character's `name`, `gender`, `birth_year`, `height`, `homeworld` URL, and the first `species` URL. We use curly braces `{}` to embed JavaScript expressions in JSX, and we access the character properties using the dot notation (`.`).
+
+Be sure to always check that the data you want to display exists before trying to render it to prevent any unexpected errors. Here, we are assuming that each character has a non-empty `species` array.
+
+Remember that React requires a unique `key` prop for each child in a list, and here we are using the character's `name` for that purpose. This helps React identify which items have changed, are added, or are removed, and contributes to the efficiency of rendering.
+
+### Part 6. Creating an Express Server to Fetch and Send Data
 
 Express is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications. You'll create an Express server that fetches data from the Star Wars API and sends it to the front end.
 
@@ -139,14 +279,20 @@ app.listen(port, () => {
 });
 ```
 
-## Review and Helpful Tips
+### Part 7. Review
 
-1. **Functional Components:** Functional components have a simple structure and are easy to understand. They don't have their lifecycle methods or state, which can simplify your components, and with Hooks, they are just as powerful as class components.
+**Functional Components:** Functional components have a simple structure and are easy to understand. They don't have their lifecycle methods or state, which can simplify your components, and with Hooks, they are just as powerful as class components.
 
-2. **React Hooks:** Hooks allow you to use state and other React features in functional components. `useEffect` and `useState` are the basic Hooks that allow you to use React features in a more direct way.
+**React Hooks:** Hooks allow you to use state and other React features in functional components. `useEffect` and `useState` are the basic Hooks that allow you to use React features in a more direct way.
 
-3. **Axios:** Axios is a popular JavaScript library used to make HTTP requests. It supports the Promise API and is more feature-rich compared to the fetch API built into modern browsers. It makes it easy to send asynchronous HTTP requests and handle responses.
+**Axios:** Axios is a popular JavaScript library used to make HTTP requests. It supports the Promise API and is more feature-rich compared to the fetch API built into modern browsers. It makes it easy to send asynchronous HTTP requests and handle responses.
 
-4. **Express Server:** An Express server is a simple way to create a server-side component of your application. It's easy to create routes and handle requests and responses.
+**Express Server:** An Express server is a simple way to create a server-side component of your application. It's easy to create routes and handle requests and responses.
 
-5. **Remember to practice these concepts and review them if they're not entirely clear yet. They are fundamental to working with React and building modern web applications. Happy coding!**
+**Rendering Lists in React:** To render multiple components in React, you can use JavaScript's array `map()` function in JSX. Remember to include a unique `key` prop for each child in the list.
+
+**Accessing Object Properties:** In JavaScript, you can access the properties of an object using the dot notation (`.`). In this lab, each character is an object with properties such as `name`, `gender`, `homeworld`, etc.
+
+**Embedding JavaScript in JSX:** JSX is not just HTML. It's a syntax extension for JavaScript, so you can embed any JavaScript expression in JSX by wrapping it in curly braces `{}`.
+
+**Remember to practice these concepts and review them if they're not entirely clear yet. They are fundamental to working with React and building modern web applications. Happy coding!**
