@@ -1,4 +1,18 @@
 
+// // import People from "./components/People";
+// // import "./App.css";
+
+// // function App() {
+// //   const [showAll, setShowAll] = useState(true);
+// //   const [currentPokemonName, setCurrentPokemonName] = useState("");
+
+// //   function handleClick(event) {
+// //     event.preventDefault();
+
+// //     setCurrentPokemonName(event.target.innerText);
+// //     setShowAll(false);
+// //   }
+
 // import People from "./components/People";
 // import "./App.css";
 
@@ -13,44 +27,13 @@
 //     setShowAll(false);
 //   }
 
-//   return {
-//     (
-//     <div>
-//       <h1>App</h1>
-//       ){showAll ? (
-//         <Pokemon handleClick={handleClick} />
-//       ) : (
-//         <SinglePokemon
-//           name={currentPokemonName}
-//           setCurrentPokemonName={setCurrentPokemonName}
-//           setShowAll={setShowAll}
-//         />
-//       )}
-//   }
-      
-    // </>
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
 //   return (
 //     <>
 //       <h1>App</h1>
-//       {showAll ? (
-//         <Pokemon handleClick={handleClick} />
-//       ) : (
-//         <SinglePokemon
-//           name={currentPokemonName}
-//           setCurrentPokemonName={setCurrentPokemonName}
-//           setShowAll={setShowAll}
-//         />
-//       )}
+//       <People />
 //     </>
-// )
-//   }
-
-// impo rt logo from './logo.svg';
-// import './App.css';
+import logo from './logo.svg';
+import './App.css';
 
 // function App() {
 //   return (
