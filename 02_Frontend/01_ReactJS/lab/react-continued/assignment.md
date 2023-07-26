@@ -4,10 +4,6 @@
 
 In this lab, you will create a web application that displays Star Wars characters using the Star Wars API (SWAPI). You will create a simple Express server that fetches data from the Star Wars API and sends it to the front end. The front-end application will be created using `create-react-app`, with an emphasis on functional components and the `useEffect` React Hook. You will also utilize `axios` for making HTTP requests.
 
-## Prerequisites
-
-To successfully complete this lab, you should be familiar with JavaScript, and basic React concepts. If you're not, please go through some beginner-friendly tutorials before attempting this lab.
-
 ## Setup
 
 **Installing the Required Software and Libraries**: This is the initial step before you start building the application. Node.js allows you to run JavaScript on your server, and npm is a package manager that is used to install libraries in your project. `create-react-app` is a tool that sets up a new React application with a single command, saving you the trouble of manually setting up the structure and configurations. Finally, Axios is a library that will help you make HTTP requests to fetch or save data.
