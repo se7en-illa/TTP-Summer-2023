@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Juke</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="icon" href="/favicon.ico?v=juke" />
+    <link rel="stylesheet" href="/font-awesome.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id='app'>
+      <div id='main' class='row container'>
+
+        <!-- Sidebar -->
+        <div id='sidebar'>
+          <img src='juke.svg' id='logo' />
+          <section>
+            <h4>
+              <a>ALBUMS</a>
+            </h4>
+          </section>
+        </div>
+
+        <div class='container'>
+
+          <!-- Single Album -->
+          <div id='single-album' class='column'>
+            <div class='album'>
+              <a>
+                <img src='default-album.jpg' />
+                <p>ALBUM 2</p>
+                <small>Artist Name</small>
+              </a>
+            </div>
+            <table id='songs'>
+              <tbody>
+                <tr class='gray'>
+                  <td />
+                  <td>#</td>
+                  <td>Name</td>
+                  <td>Artist</td>
+                  <td>Genre</td>
+                </tr>
+                <tr>
+                  <td><i class='fa fa-play-circle' /></td>
+                  <td>1</td>
+                  <td>Song Name</td>
+                  <td>Artist Name</td>
+                  <td>Song Genre</td>
+                </tr>
+                <tr>
+                  <td><i class='fa fa-play-circle' /></td>
+                  <td>2</td>
+                  <td>Song Name</td>
+                  <td>Artist Name</td>
+                  <td>Song Genre</td>
+                </tr>
+                <tr>
+                  <td><i class='fa fa-play-circle' /></td>
+                  <td>3</td>
+                  <td>Song Name</td>
+                  <td>Artist Name</td>
+                  <td>Song Genre</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+
+        <!-- Player -->
+        <div id='player-container'>
+          <div id='player-controls'>
+            <div class='row center'>
+              <i class='fa fa-step-backward'></i>
+              <i class='fa fa-pause-circle'></i>
+              <i class='fa fa-step-forward'></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>

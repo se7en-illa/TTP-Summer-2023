@@ -9,7 +9,7 @@ export default function People() {
   // useEffect(() => {
   //   async function fetchPeople() {
   //     const response = await fetch(
-  //       "https://mocki.io/v1/93b89f1d-c95b-4b00-947d-b692e7528a3f"
+  //       "https://pokeapi.co/api/v2/pokemon"
   //     );
 
   //     const people = await response.json();

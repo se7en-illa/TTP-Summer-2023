@@ -1,22 +1,31 @@
 import { useState, useEffect } from "react";
-import Pokemon from "./SinglePokemon";
+import SinglePokemon from "./SinglePokemon";
 
-export default function People() {
-  const [pokemon, setPeople] = useState([]);
-  const [ids, setIds] = useState([0, 1, 2]);
+export default function Pokemon({ handleClick }) {
+  const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
-    async function fetchPeople() {
-      const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon"
-      );
+    async function fetchPokemon() {
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon");
+      const pokemon = await response.json();
 
-      const people = await response.json();
-      setPeople(people);
+      setPokemon(pokemon.results);
+
+      // console.log(pokemon.results);
     }
 
-    fetchPeople();
-  });
+    fetchPokemon();
+  }, []);
 
-  return "sdfds";
+  return (
+    <ul>
+      {pokemon.map(({ name }) => (
+        <li key={name}>
+          <a onClick={handleClick} href={`/${name}`}>
+            {name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  );
 }
