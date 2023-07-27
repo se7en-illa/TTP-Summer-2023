@@ -15,7 +15,7 @@ In this part, we will take a step further and two React components to display al
 
 ### Setup
 
-1. Fork and clone [this boilerplate repository]()
+1. Fork and clone [this boilerplate repository](https://github.com/se7en-illa/pokedex-boilerplate-v3)
 2. CD into the project directory.
 3. Install your dependencies by running `npm install`
 4. Run your server with `npm start`
