@@ -111,9 +111,15 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 ###### W6:
 
-- [ ] July 24th: TBD
-- [ ] July 25th: TBD
-- [ ] July 26th: TBD
+- [x] July 24th: Single Page Applications
+  - In-Class Lab: [spa](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/00_Single_Page_Applications/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/MD8pA1AN2dWjw1Wvg9dQhVjA3D50WfFYi7ZzgbM4U3OR2u2NtxSwYr1WegghAeKl.dC3D5qTmXxiFZXeB)
+- [x] July 25th: Intro to React
+  - In-Class Lab: [react-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/01_ReactJS/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/JVVSn3EZiccpDXdHTG9aWTfl3TQKUv9MthhMYbQld5VF8OzOs56ezZhaE8ISULkj.FfdXW_KWgXm21OQn)
+- [x] July 26th: React useEffect
+  - In-Class Lab: [useEffect](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/02_useEffect/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/RFdI1dj2zVPgQhEqt9cZ9Nh2AQ99gKLPQPixU9EpDCGnQ05jOR6p9HZdCWFGCWYA.089rHb8pnfVdotIJ)
 - [ ] July 27th: TBD
 
 ###### W7:
