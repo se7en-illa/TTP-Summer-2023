@@ -103,7 +103,7 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 - [x] July 19th: Sequelize
   - In-Class Lab: [sequelize-basics](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/sequelize-basics/lab/assignment.md)
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/WoK1BkA2IFmixUAE-hkj4Jt8GCm3y_YxuA_EZde3OqTbq-Rsq4lUw5af9oXNZ_sR.pOeMMMMwa9OF-8i4)
-- [ ] July 20th: Sequelize & Express Review
+- [x] July 20th: Sequelize & Express Review
   - In-Class Lab: [sequelize-express-review](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/03_Databases/review/lab/assignment.md)
   - Project #4: [assignment](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/01_Backend/project-4/assignment.md)
 
@@ -120,7 +120,9 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 - [x] July 26th: React useEffect
   - In-Class Lab: [useEffect](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/02_useEffect/lab/assignment.md)
   - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/RFdI1dj2zVPgQhEqt9cZ9Nh2AQ99gKLPQPixU9EpDCGnQ05jOR6p9HZdCWFGCWYA.089rHb8pnfVdotIJ)
-- [ ] July 27th: TBD
+- [x] July 27th: Fullstack Development w/ React
+  - Project #5: [assignment](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/project-5/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/aeYxNUe98l0I4FO6bX120qMRViI1p9B9PbWHWP3FAPEEK52dizF1Ri-rw1SAT_Au.y9cF73ngGYC2ABt1)
 
 ###### W7:
 
