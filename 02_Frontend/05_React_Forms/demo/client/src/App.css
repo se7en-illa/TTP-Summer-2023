@@ -1,0 +1,125 @@
+/* tags */
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  border-bottom: solid 1px gray;
+  padding: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: #444;
+  transition: color 0.5s ease;
+}
+
+a:hover {
+  color: #888;
+}
+
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(45deg, #eee, #fff);
+  background-attachment: fixed;
+  letter-spacing: 0.03em;
+}
+
+p {
+  font-size: 14px;
+  margin: 0;
+  color: #aaa;
+}
+
+h3 {
+  margin: 0.5em 0;
+}
+
+button {
+  padding: 1em 2em;
+  border: none;
+  font-size: 1em;
+  transition: all 1s ease;
+  outline: none;
+  letter-spacing: 0.1em;
+}
+
+button.remove {
+  background-color: #ff0000;
+  color: white;
+}
+
+button.remove:hover {
+  background-color: #cc0000;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main > div {
+  width: 50%;
+}
+
+/* form */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  margin: 1em;
+}
+
+input {
+  padding: 0.3em;
+  margin: 0.5em 0;
+  font-size: 1.5em;
+}
+
+button {
+  color: white;
+  background-color: #59a9e9;
+}
+
+.delete-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 2;
+  margin: 1em;
+}
+
+.button-box {
+  display: flex;
+  gap: 10px;
+}
+
+button:hover {
+  background-color: #59a9c2;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
