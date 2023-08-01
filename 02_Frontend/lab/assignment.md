@@ -1,8 +1,8 @@
-# Lab: React Forms
+# Lab: React Forms Deep Dive
 
 ### Introduction:
 
-In this lab, we're going to build on our basic understanding of React and dive deeper into forms. You will practice using controlled components, utilizing the `useState` hook. We will also be creating forms that send `GET`, `POST`, `PUT`, and `DELETE` requests.
+In this lab, we're going to build on our basic understanding of React and dive deeper into forms. You will practice using controlled components, utilizing the `useState` hook. We will also be creating forms that send `POST`, `PUT`, and `DELETE` requests.
 
 ## Part 1: Setting Up The Project
 
@@ -35,7 +35,7 @@ Controlled components have their values controlled by React. We can combine `use
 - Step 4: Implement a submit handler that reads the values of the input fields from their states.
 
 <details>
-<summary>Hint: Completed Component</summary>
+<summary>Hint: Controlled Form with useState</summary>
 
 ```javascript
 import React, { useState } from "react";
@@ -79,7 +79,7 @@ export default ControlledForm;
 
 ## Part 3: Sending HTTP Requests
 
-Now that we have our form, let's make it do something useful. We'll use Axios to send `GET`, `POST`, `PUT`, and `DELETE` requests when the forms are submitted.
+Now that we have our form, let's make it do something useful. We'll use Axios to send `POST`, `PUT`, and `DELETE` requests when the forms are submitted.
 
 - Step 1: Install JSON Server to create a fake REST API for testing.
 
@@ -101,24 +101,7 @@ Now that we have our form, let's make it do something useful. We'll use Axios to
 % json-server --watch db.json
 ```
 
-- Step 4: In your `ControlledForm`, modify the form to include an `id` field. Modify the submit handler to send a `GET` request to `http://localhost:3000/users/:id` to fetch the user data, a `POST` request to `http://localhost:3000/users` to create a new user, a `PUT` request to `http://localhost:3000/users/:id` to update a user, and a `DELETE` request to `http://localhost:3000/users/:id` to delete a user.
-
-<details>
-<summary>Hint: Axios GET Request</summary>
-
-```javascript
-import axios from "axios";
-
-// ...
-
-const handleFetch = async (event) => {
-  event.preventDefault();
-  const response = await axios.get(`http://localhost:3000/users/${id}`);
-  console.log(response.data);
-};
-```
-
-</details>
+- Step 4: In your `ControlledForm`, modify the form to include an `id` field. Modify the submit handler to send a `POST` request to `http://localhost:3000/users` to create a new user, a `PUT` request to `http://localhost:3000/users/:id` to update a user, and a `DELETE` request to `http://localhost:3000/users/:id` to delete a user. Make sure to add these functions to the `onSubmit` of the form and enter the correct data in the forms to perform the respective CRUD operations.
 
 <details>
 <summary>Hint: Axios POST Request</summary>
@@ -190,7 +173,7 @@ In this lab, you've learned how to:
 - Set up a new React project using `create-react-app`.
 - Create controlled components using the `useState` hook.
 - Handle form submission in React.
-- Send `GET`, `POST`, `PUT`, and `DELETE` requests using Axios.
+- Send `POST`, `PUT`, and `DELETE` requests using Axios.
 - Test your forms and HTTP requests.
 
 Well done! You've now deepened your understanding of React forms by using controlled components, sending HTTP requests, and testing your forms. Keep practicing to reinforce these skills.
