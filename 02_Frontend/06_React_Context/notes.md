@@ -7,6 +7,7 @@ _Context lets a component receive information from distant parents without passi
 ## Creating a Context
 
 ```jsx
+// UserContext.js
 import { createContext } from "react";
 
 export const UserContext = createContext(null);
