@@ -126,10 +126,18 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 ###### W7:
 
-- [ ] July 31st: TBD
-- [ ] August 1st: TBD
-- [ ] August 2nd: TBD
-- [ ] August 3rd: TBD
+- [x] July 31st: React Router
+  - In-Class Lab: [react-router](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/04_React_Router/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/qhb5UxbgdlIU_8HkGej8F06MenxLLnJs60p_6eKIabGfH-NNGCBMU3Jua6YgOTud.gHdRxUuG2BURojW9)
+- [x] August 1st: React Forms
+  - In-Class Lab: [react-forms](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/05_React_Forms/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/ukRXOG3QEULZO2g2rVxZkR-TvCY_Z6gtGCJXCcrZhRBb0potRtPIslRQCsicoXmp.BAZfb08JHM9Bzzn-)
+- [x] August 2nd: React Context
+  - In-Class Lab: [react-context](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/06_React_Context/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/W5RCTI5TmX6qvtsPU2GrHy0K6oVfs7QvImOVru5y1m99scnqxFkoC1GfA1NJ1Ngy.oC7qz0FEbI2Dn3c8)
+- [x] August 3rd: Authentication + Authorization
+  - In-Class Lab: [authentication-authorization](https://github.com/se7en-illa/TTP-Summer-2023/blob/main/02_Frontend/07_Authentication/lab/assignment.md)
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/fhabuHWtsPRMWX71B6z0nlT4wM_jqb5AmWLHNsJyMpghGQQa59MzsAoHuq2C2vYl.vH8t5O5RRzKk76R7)
 
 #### Phase 4: Group Project 1: CRUD App
 
