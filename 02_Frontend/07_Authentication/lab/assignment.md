@@ -219,7 +219,7 @@ The App component is the perfect place to hold onto our notes array.
 
 </details>
 
-Go ahead and add notes as an additional piece of state to your constructor.
+Go ahead and add notes as an additional state variable.
 
 #### Adding the API Call
 
