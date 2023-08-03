@@ -6,7 +6,7 @@ In this lab, we're going to build on our basic understanding of React Hooks and 
 
 ## Part 1: What we're building/Setting Up
 
-1. Fork and clone [this repo]() to your computer.
+1. Fork and clone [this repo](https://github.com/se7en-illa/auth_lab) to your computer.
 2. Navigate into the project and open it in VSCode.
 3. Use the command `npm install` in your terminal to install all of the node modules.
 4. Take a moment to review the starting point.
