@@ -110,7 +110,7 @@ jwt.sign(
 
 ## Bcrypt
 
-There are two main function we will be using from this library:
+There are two main functions we will be using from this library:
 
 - `hash` - creates a hashed value from a plain password
 - `compare` - compares a plain password against a hashed password
@@ -151,13 +151,13 @@ const bcrypt = require("bcrypt");
 
 async function verifyLogin() {
   const isValid = await bcrypt.compare(
-    "plaint text password",
+    "plain text password",
     "$2b$05$VfIxWvwm/G90UPJGQxVihOu116gCb/agPwJrKLZKzeHKyV0SHnF5m"
   );
 
   console.log(isValid); // true
 
-  const notValid = await await bcrypt.compare(
+  const notValid = await bcrypt.compare(
     "some other password",
     "$2b$05$VfIxWvwm/G90UPJGQxVihOu116gCb/agPwJrKLZKzeHKyV0SHnF5m"
   );
