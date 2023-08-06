@@ -122,13 +122,17 @@ _wizarding school_
 
 - [ ] Write a component to display a form for adding a new wizarding school that contains inputs for at least the name and location.
 - [ ] Display this component as part of the wizarding schools view, alongside the list of wizarding schools
-      **Submitting the form with a valid name/location should:** - [ ] Make an AJAX request that causes the new wizarding school to be persisted in the database - [ ] Add the new wizarding school to the list of wizarding schools without needing to refresh the page
+      **Submitting the form with a valid name/location should:**
+- [ ] Make an AJAX request that causes the new wizarding school to be persisted in the database
+- [ ] Add the new wizarding school to the list of wizarding schools without needing to refresh the page
 
 _student_
 
 - [ ] Write a component to display a form for adding a new student that contains inputs for at least first name, last name and email
 - [ ] Display this component as part of the students view, alongside the list of students
-    **Submitting the form with a valid first name/last name/email should:** - [ ] Make an AJAX request that causes the new student to be persisted in the database - [ ] Add the new student to the list of students without needing to refresh the page
+      **Submitting the form with a valid first name/last name/email should:**
+- [ ] Make an AJAX request that causes the new student to be persisted in the database
+- [ ] Add the new student to the list of students without needing to refresh the page
 </details>
 
 <details>
@@ -137,12 +141,16 @@ _student_
 _wizarding school_
 
 - [ ] In the wizarding schools view, include an X button next to each wizarding school
-      **Clicking the X button should:** - [ ] Make an AJAX request that causes that wizarding school to be removed from database - [ ] Remove the wizarding school from the list of wizarding schools without needing to refresh the page
+      **Clicking the X button should:**
+- [ ] Make an AJAX request that causes that wizarding school to be removed from database
+- [ ] Remove the wizarding school from the list of wizarding schools without needing to refresh the page
 
 _student_
 
 - [ ] In the students view, include an X button next to each student
-    **Clicking the X button should:** - [ ] Make an AJAX request that causes that student to be removed from database - [ ] Remove the student from the list of students without needing to refresh the page
+      **Clicking the X button should:**
+- [ ] Make an AJAX request that causes that student to be removed from database
+- [ ] Remove the student from the list of students without needing to refresh the page
 </details>
 
 <details>
