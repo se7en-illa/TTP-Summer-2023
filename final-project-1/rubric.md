@@ -41,7 +41,7 @@
 
 ### Deductions
 
-Points may be deducted if you are unable to complete a requirement without full direction from an instructor or a fellow. Points may also be deducted for any "hacks" or solutions to problems that do not properly employ the tools at hand (ex. directly modifying the DOM instead of allowing React to modify it for you). Any deductions will be documented below:
+Points may be deducted if you are unable to complete a requirement without full direction from an instructor or a TA. Points may also be deducted for any "hacks" or solutions to problems that do not properly employ the tools at hand (ex. directly modifying the DOM instead of allowing React to modify it for you). Any deductions will be documented below:
 
 ---
 
