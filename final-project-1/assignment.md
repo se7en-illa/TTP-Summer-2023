@@ -1,16 +1,17 @@
-# Final Project #1
+# Final Project #1: Wizarding Schools Network
 
 ## The Premise
 
-You are the Chief Magical Officer of the company which manages enrollment for all Wizarding Schools across the globe. Create a RESTful web platform that allows you to manage your students and schools. Before getting started, please carefully review the expectations as outlined below.
+You are the Chief Magical Officer of the company, the _Wizard Schools Network_, which manages enrollment for all Wizarding Schools across the globe. Create a RESTful web platform that allows you to manage your students and schools. Before getting started, please carefully review the expectations as outlined below.
 
 All seed data is provided for you in the seed.js file. To start your project, use the following steps:
 
 1. Fork and clone this repository to your local machine.
 2. CD into the project folder and install all dependencies using `npm install`.
-3. Create a new database called `wizarding-schools`.
-4. Seed your database using `npm run seed`.
-5. Run the server using `npm run start:dev`.
+3. Create a new database called `wizarding-schools-network`.
+4. Run the server using `npm run start`.
+
+_Note: You may seed your database using `npm run seed` **AFTER** you have created your models._
 
 ## BACK END:
 
@@ -123,7 +124,7 @@ _wizarding school_
 - [ ] Write a component to display a form for adding a new wizarding school that contains inputs for at least the name and location.
 - [ ] Display this component as part of the wizarding schools view, alongside the list of wizarding schools
       **Submitting the form with a valid name/location should:**
-- [ ] Make an AJAX request that causes the new wizarding school to be persisted in the database
+- [ ] Make an Axios request that causes the new wizarding school to be persisted in the database
 - [ ] Add the new wizarding school to the list of wizarding schools without needing to refresh the page
 
 _student_
@@ -131,7 +132,7 @@ _student_
 - [ ] Write a component to display a form for adding a new student that contains inputs for at least first name, last name and email
 - [ ] Display this component as part of the students view, alongside the list of students
       **Submitting the form with a valid first name/last name/email should:**
-- [ ] Make an AJAX request that causes the new student to be persisted in the database
+- [ ] Make an Axios request that causes the new student to be persisted in the database
 - [ ] Add the new student to the list of students without needing to refresh the page
 </details>
 
@@ -142,14 +143,14 @@ _wizarding school_
 
 - [ ] In the wizarding schools view, include an X button next to each wizarding school
       **Clicking the X button should:**
-- [ ] Make an AJAX request that causes that wizarding school to be removed from database
+- [ ] Make an Axios request that causes that wizarding school to be removed from database
 - [ ] Remove the wizarding school from the list of wizarding schools without needing to refresh the page
 
 _student_
 
 - [ ] In the students view, include an X button next to each student
       **Clicking the X button should:**
-- [ ] Make an AJAX request that causes that student to be removed from database
+- [ ] Make an Axios request that causes that student to be removed from database
 - [ ] Remove the student from the list of students without needing to refresh the page
 </details>
 
@@ -163,7 +164,7 @@ _student_
 
 _Submitting the form with valid data should:_
 
-- [ ] Make an AJAX request that causes that wizarding school to be updated in the database
+- [ ] Make an Axios request that causes that wizarding school to be updated in the database
 - [ ] Update the wizarding school in the current view without needing to refresh the page
 
 - [ ] In the wizarding school view, display an Unenroll button next to each of its students, which removes the student from the wizarding school (in the database as well as this view)
@@ -176,7 +177,7 @@ _Submitting the form with valid data should:_
 
 _Submitting the form with valid data should:_
 
-- [ ] Make an AJAX request that causes that student to be updated in the database
+- [ ] Make an Axios request that causes that student to be updated in the database
 - [ ] Update the student in the current view without needing to refresh the page
 
 </details>
