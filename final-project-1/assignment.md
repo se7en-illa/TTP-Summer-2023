@@ -13,7 +13,7 @@ All seed data is provided for you in the seed.js file. To start your project, us
 
 _Note: You may seed your database using `npm run seed` **AFTER** you have created your models._
 
-## BACK END:
+## BACK END (59 total points):
 
 <details>
 <summary>Tier 1: All Wizarding Schools and Students (26/59):</summary>
@@ -76,7 +76,7 @@ _wizarding school_
 - [ ] Write a route to update an existing student
 </details>
 
-## FRONT END:
+## FRONT END (59 total points):
 
 <details>
 <summary>Tier 1: All Wizarding Schools and Students (26/59):</summary>
