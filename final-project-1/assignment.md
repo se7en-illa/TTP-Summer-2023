@@ -182,7 +182,7 @@ _Submitting the form with valid data should:_
 
 </details>
 
-## EXTRA CREDIT:
+## EXTRA CREDIT (4 extra points each):
 
 <details>
 <summary>Finishing Touches:</summary>
