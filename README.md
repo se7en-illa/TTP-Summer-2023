@@ -143,25 +143,26 @@ Hey there, students! Welcome to our class repository for the TTP @ John Jay Summ
 
 ###### W8:
 
-- [ ] August 7th: CRUD App Day 1
-- [ ] August 8th: CRUD App Day 2
-- [ ] August 9th: CRUD App Day 3
-- [ ] August 10th: CRUD App Day 4
+- [x] August 7th: CRUD App Day 1
+- [x] August 8th: CRUD App Day 2
+- [x] August 9th: CRUD App Day 3
+- [x] August 10th: CRUD App Day 4
 
 #### Phase 5: Group Project 2: Capstone
 
 ###### W9:
 
-- [ ] August 14th: Capstone Day 1
-- [ ] August 15th: Capstone Day 2
-- [ ] August 16th: Capstone Day 3
-- [ ] August 17th: Capstone Day 4
+- [x] August 14th: Final Project Day 1
+  - Recording: [📺 click here](https://jjay-cuny.zoom.us/rec/share/pmuW2qfBQCPk1KWXl9dLlb7S8ThO3TS2IxovQnuXQ0qIUKB1CwSLEagjPGwbRW60.s-gDfJ_yC-QREw7a)
+- [ ] August 15th: Final Project Day 2
+- [ ] August 16th: Final Project Day 3
+- [ ] August 17th: Presentations
 
 ###### W10:
 
-- [ ] August 21st: Capstone Day 5
-- [ ] August 22nd: Capstone Day 6
-- [ ] August 23rd: Capstone Due Date
+- [ ] August 21st:
+- [ ] August 22nd:
+- [ ] August 23rd:
 - [ ] August 24th:
 - [ ] August 25th:
 
