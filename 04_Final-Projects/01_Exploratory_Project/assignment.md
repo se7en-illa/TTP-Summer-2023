@@ -10,7 +10,7 @@ You've worked diligently to learn many useful web development skills in the cour
 - It should use ReactJS
 - It should use either:
   - At least one API or
-  - `localStorage` or
+  - [`localStorage`](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) or
   - both
 - It should have a navbar
 - It should have at least three React routes 
@@ -35,6 +35,12 @@ You've worked diligently to learn many useful web development skills in the cour
 - A blog posting platform for a specific topic of interest
 - A quiz app that asks people questions on a particular topic
 - A simple book management application similar to Goodreads
+
+## APIs
+
+You can use any API you find useful to your project however, if you would like to review a list of some available ones you can look [here](https://github.com/public-apis/public-apis).
+
+## Inspiration
 
 For some inspiration, try looking thru some of the links on this [search query](https://www.google.com/search?q=cool+react+application+ideas).
 
