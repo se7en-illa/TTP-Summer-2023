@@ -26,6 +26,6 @@ On the due date, we will start a thread within the cohort Slack channel.
 
 Share the name of the technology you used, a quick description of what the technology is used for, and the link to your YouTube screencast.
 
-- For example, Slack, "**_D3.js - JavaScript library for producing dynamic, interactive data visualizations in web browsers. [insert link here]_**," which can foster a conversation amongst each other like so:
+- For example, Slack, "**\_D3.js - JavaScript library for producing dynamic, interactive data visualizations in web browsers.**," which can foster a conversation amongst each other like so:
   - “Wow I didn’t know you could do that with D3!”
   - “Thanks, I really liked your Firebase demonstration. How’d you get that information to show up on the front end?”
