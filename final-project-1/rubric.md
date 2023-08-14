@@ -51,9 +51,9 @@ _Comments from your instructor or TA will go here_
 
 ## Evaluation
 
-- Requirements score (59 points total, weighted at 70% of total grade)
+- Requirements score (118 points total, weighted at 70% of total grade)
 - Rubric score (24 points total, weighted at 30% of total grade)
-- Extra credit (15 points total, for an additional 15% max)
+- Extra credit (16 points total, for an additional 16% max)
 
 - RAW REQUIREMENT SCORE: \_\_
 - RAW RUBRIC SCORE: \_\_
@@ -69,9 +69,9 @@ const getTotal = (
   rawExtraCredit,
   deductions
 ) => {
-  const totalRequirementScore = (rawRequirementScore / 59) * 100 * 0.7;
+  const totalRequirementScore = (rawRequirementScore / 118) * 100 * 0.7;
   const totalRubricScore = (rawRubricScore / 24) * 100 * 0.3;
-  const totalExtraCredit = (rawExtraCredit / 15) * 100 * 0.15;
+  const totalExtraCredit = (rawExtraCredit / 16) * 100 * 0.16;
 
   const total =
     totalRequirementScore + totalRubricScore + totalExtraCredit - deductions;
