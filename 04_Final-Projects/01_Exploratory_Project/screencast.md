@@ -23,7 +23,7 @@ Presentations will be conducted in our main zoom room. I will be playing your vi
 ## Extra Potential Topics
 
 - If you had more time what would you do differently?
-- Talk about and demo a feature are you most proud of
+- Talk about and demo a feature you are most proud of
 - What is a big win you had while working on this project?
 
 ## Tips
