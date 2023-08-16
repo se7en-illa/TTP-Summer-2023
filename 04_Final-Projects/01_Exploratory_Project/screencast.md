@@ -2,7 +2,7 @@
 
 ## Breakdown
 
-Your grace shopper presentations should focus on presenting your projects features and implementation details with your classmates in an organized fashion. See below for some topics you should to talk about when recording your video as well as some extras if you need more content.
+Your screencasts should focus on presenting your projects features and implementation details with your classmates in an organized fashion. See below for some topics you should to talk about when recording your video as well as some extras if you need more content.
 
 ## Timing
 
